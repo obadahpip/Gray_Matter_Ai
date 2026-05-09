@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gray Matter AI — coming soon</title>
+  <meta name="description" content="Gray Matter AI — whatever your software is, we can make it. Coming soon." />
+  <meta name="theme-color" content="#05070d" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b82f6'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' text-anchor='middle' fill='%23051427' font-weight='700'%3Egm%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">gm</span>
+        <span>gray matter <span class="muted">ai</span></span>
+      </a>
+      <div class="nav__links">
+        <a href="#about">about</a>
+        <a href="#founder">founder</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
+        <a href="login.html" class="nav__cta">client login</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow">coming soon · v0.1</span>
+          <h1>whatever your software is, <span class="gradient-text">we can make it.</span></h1>
+          <p class="lede">
+            We turn vague napkin sketches into shipped software. The best programmers, the best
+            coffee machine, and a cat that may or may not be running QA.
+          </p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#projects">see what we&rsquo;re building →</a>
+            <a class="btn btn--ghost" href="login.html">client login</a>
+          </div>
+          <div class="mt-3">
+            <span class="coffee-widget" id="coffee">
+              <span>☕ coffee level</span>
+              <span class="level" style="--coffee: 87%;"></span>
+              <span id="coffee-pct" class="mono">87%</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="terminal scanlines" aria-hidden="true">
+          <div class="terminal__bar">
+            <span class="terminal__dot r"></span>
+            <span class="terminal__dot y"></span>
+            <span class="terminal__dot g"></span>
+            <span class="terminal__title">~/gray-matter — bash</span>
+          </div>
+          <div class="terminal__body" id="terminal-body">
+            <div><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+            <div class="out">obadah — fixer of every thing</div>
+            <div class="mt-1"><span class="prompt">$</span> <span class="cmd">cat ./pitch.txt</span></div>
+            <div class="out">→ whatever your software is, we can make it.</div>
+            <div class="out">→ we make your vision come true.</div>
+            <div class="mt-1"><span class="prompt">$</span> <span class="cmd">./deploy.sh --client="you"</span></div>
+            <div class="ok">✓ stack provisioned</div>
+            <div class="ok">✓ designs polished</div>
+            <div class="warn">⚠ awaiting your idea</div>
+            <div class="mt-1"><span class="prompt">$</span> <span class="cursor"></span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="about">
+    <div class="container">
+      <span class="eyebrow">// the idea</span>
+      <h2>Small team. Sharp output. Suspiciously good coffee.</h2>
+      <p class="muted" style="max-width:42rem;margin-bottom:2rem;">
+        Gray Matter AI is what happens when an AI &amp; robotics graduate decides the world
+        needs less corporate fluff and more software that actually ships. We work with
+        founders, businesses, and humans-with-an-idea to turn it into a thing you can click on.
+      </p>
+
+      <div class="about-grid">
+        <div class="fact">
+          <h3>// the promise</h3>
+          <p>If you can describe it, we can build it. If you can&rsquo;t describe it, we&rsquo;ll help you describe it, then build it.</p>
+        </div>
+        <div class="fact">
+          <h3>// the team</h3>
+          <p>One founder, one cat, one coffee machine. Surprisingly productive trio. Strict no-meeting policy with the cat.</p>
+        </div>
+        <div class="fact">
+          <h3>// the stack</h3>
+          <p>Whatever yours needs to be. Web, mobile, ERP, AI, dashboards, scrappy MVPs &mdash; pick your fight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="founder">
+    <div class="container">
+      <span class="eyebrow">// founder &amp; CEO (and everything else)</span>
+      <h2>Obadah Wajeh Suliman Abuodeh</h2>
+
+      <div class="founder">
+        <div class="founder__bio">
+          <p>
+            Born <strong>2003</strong>. Graduated <strong>2025</strong> from <strong>Al-Balqa Applied University</strong> (Jordan)
+            with a B.Sc. in <strong>AI &amp; Robotics</strong>. Then, against everyone&rsquo;s recommendation,
+            got <strong>spectacularly lost in N&rsquo;Djamena, Chad</strong> for a full year. Lost <strong>40&nbsp;kg</strong>.
+            Found himself. Founded Gray Matter AI.
+          </p>
+          <p>
+            Today he is the founder, CEO, lead developer, customer success team, project manager,
+            and on Tuesdays the IT department. The coffee machine handles emotional support;
+            <strong>Mrs. Cookie</strong> (the cat) handles strategic vision.
+          </p>
+          <p class="muted">
+            Roles currently held: founder, CEO, programmer, customer service, fixer of every thing,
+            person who carries the laptop. Roles outsourced: emotional support → coffee machine,
+            executive review → Mrs. Cookie.
+          </p>
+        </div>
+        <div class="founder__stats">
+          <div class="stat"><div class="stat__value">2003</div><div class="stat__label">born</div></div>
+          <div class="stat"><div class="stat__value">2025</div><div class="stat__label">graduated</div></div>
+          <div class="stat"><div class="stat__value">40<span class="muted" style="font-size:1rem;">kg</span></div><div class="stat__label">lost in chad</div></div>
+          <div class="stat"><div class="stat__value">23/7</div><div class="stat__label">coffee uptime</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="container">
+      <span class="eyebrow">// portfolio</span>
+      <h2>Projects we&rsquo;ve shipped &mdash; and ones still in the oven</h2>
+      <p class="muted" style="max-width:40rem;">A short walk through what we&rsquo;ve built and what&rsquo;s currently bubbling.</p>
+
+      <h3 style="margin: 2.4rem 0 1rem; color: var(--text-2); font-family: var(--font-mono); font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;">// shipped</h3>
+      <div class="projects-grid" id="completed-projects"></div>
+
+      <h3 style="margin: 2.4rem 0 1rem; color: var(--text-2); font-family: var(--font-mono); font-size: .85rem; letter-spacing: .12em; text-transform: uppercase;">// in progress</h3>
+      <div class="projects-grid" id="wip-projects"></div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="panel" style="text-align:center;padding:2.6rem;">
+        <span class="eyebrow">// say hi</span>
+        <h2>Got an idea? Bring it.</h2>
+        <p class="muted" style="max-width:32rem;margin: .5rem auto 1.6rem;">
+          We&rsquo;re still polishing this site (irony noted). Until then, the fastest way in is email.
+        </p>
+        <a class="btn btn--primary" href="mailto:obadahabuodeh@gmail.com">obadahabuodeh@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> · <span class="mono">gray matter ai</span> · made with caffeine in jordan</div>
+      <small>this is a teaser site. the real one is coming soon™. <span style="opacity:.5">↑↑↓↓←→←→ba</span></small>
+    </div>
+  </footer>
+
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    // ---- year + coffee level mood ----
+    document.getElementById("year").textContent = new Date().getFullYear();
+    (function coffeeMood() {
+      const lvl = 60 + Math.floor(Math.random() * 40); // 60-99%
+      const widget = document.getElementById("coffee");
+      const pct = document.getElementById("coffee-pct");
+      widget.querySelector(".level").style.setProperty("--coffee", lvl + "%");
+      pct.textContent = lvl + "%";
+    })();
+
+    // ---- render projects ----
+    (async function renderProjects() {
+      try {
+        const data = await GMAI.loadData();
+        const completed = data.completedProjects || [];
+        const clients = Object.values(data.clients || {});
+        const cont1 = document.getElementById("completed-projects");
+        const cont2 = document.getElementById("wip-projects");
+
+        cont1.innerHTML = completed.map(p => `
+          <a class="project-card" href="${GMAI.escapeHtml(p.url)}" target="_blank" rel="noopener">
+            <span class="tag tag--live">live</span>
+            <div class="project-card__title">${GMAI.escapeHtml(p.name)}</div>
+            <div class="project-card__url">${GMAI.escapeHtml(p.url.replace(/^https?:\/\//, ""))}</div>
+            <div class="project-card__blurb">${GMAI.escapeHtml(p.blurb)}</div>
+          </a>
+        `).join("");
+
+        cont2.innerHTML = clients.map(c => {
+          const hasLink = c.liveLink && c.liveLink.length > 0;
+          const tagClass = hasLink ? "tag--wip" : "tag--soon";
+          const tagText  = hasLink ? "test launch" : "in discovery";
+          const card = `
+            <article class="project-card">
+              <span class="tag ${tagClass}">${tagText}</span>
+              <div class="project-card__title">${GMAI.escapeHtml(c.name)}</div>
+              ${hasLink ? `<div class="project-card__url"><a href="${GMAI.escapeHtml(c.liveLink)}" target="_blank" rel="noopener">${GMAI.escapeHtml(c.liveLink.replace(/^https?:\/\//, ""))}</a></div>` : `<div class="project-card__url muted">live link tba</div>`}
+              <div class="project-card__blurb">${GMAI.escapeHtml(c.tagline || "")}</div>
+            </article>`;
+          return card;
+        }).join("");
+      } catch (err) {
+        console.error(err);
+      }
+    })();
+  </script>
+</body>
+</html>
+      }
+    })();
+  </script>
+</body>
+</html>

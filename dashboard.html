@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard · Gray Matter AI</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%233b82f6'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='18' text-anchor='middle' fill='%23051427' font-weight='700'%3Egm%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="brand">
+        <span class="brand__mark">gm</span>
+        <span>gray matter <span class="muted">ai</span></span>
+      </a>
+      <div class="nav__links">
+        <span class="muted mono" id="nav-user" style="font-size:.82rem;"></span>
+        <button class="btn btn--ghost btn--sm" id="logout-btn">sign out</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container" style="padding: 3rem 1.4rem;">
+    <div class="dash__header">
+      <div class="dash__title">
+        <span class="eyebrow">// your project</span>
+        <h1 id="client-name">…</h1>
+        <p class="muted" id="client-tagline"></p>
+      </div>
+      <span class="status-pill" id="client-status">loading</span>
+    </div>
+
+    <div class="card-grid">
+      <!-- Live link -->
+      <div class="panel">
+        <h3 style="font-family: var(--font-mono); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-3); margin-bottom: .8rem;">// live test launch</h3>
+        <div id="live-link-area">
+          <div class="empty-state">no live link yet</div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="panel">
+        <h3 style="font-family: var(--font-mono); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-3); margin-bottom: .8rem;">// progress</h3>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: .8rem;">
+          <div class="stat" style="padding: 1rem;">
+            <div class="stat__value" id="todos-done">0</div>
+            <div class="stat__label">tasks done</div>
+          </div>
+          <div class="stat" style="padding: 1rem;">
+            <div class="stat__value" id="todos-total">0</div>
+            <div class="stat__label">total tasks</div>
+          </div>
+        </div>
+        <div class="mt-2" style="background: rgba(255,255,255,0.04); height: 8px; border-radius: 999px; overflow: hidden;">
+          <div id="progress-bar" style="height:100%; width:0%; background: linear-gradient(90deg, var(--blue), var(--accent)); transition: width .8s ease;"></div>
+        </div>
+        <div class="mt-1" style="text-align: right; font-family: var(--font-mono); font-size: .78rem; color: var(--text-3);">
+          <span id="progress-pct">0%</span> complete
+        </div>
+      </div>
+    </div>
+
+    <!-- Todos -->
+    <div class="panel mt-3">
+      <div class="flex between items-center wrap gap-2" style="margin-bottom: 1rem;">
+        <div>
+          <h3 style="font-family: var(--font-mono); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-3);">// todos</h3>
+          <p class="muted" style="font-size: .82rem;">written by Gray Matter AI &mdash; this is what we're working on for you.</p>
+        </div>
+      </div>
+      <div id="todos-area"></div>
+    </div>
+
+    <!-- Notes -->
+    <div class="panel mt-3">
+      <div class="flex between items-center wrap gap-2" style="margin-bottom: 1rem;">
+        <div>
+          <h3 style="font-family: var(--font-mono); font-size: .82rem; text-transform: uppercase; letter-spacing: .12em; color: var(--text-3);">// your notes</h3>
+          <p class="muted" style="font-size: .82rem;">tell us what to change, fix, or add. we read these.</p>
+        </div>
+      </div>
+
+      <form id="note-form" class="form" style="margin-bottom: 1.4rem;">
+        <textarea id="note-text" placeholder="e.g. please change the homepage banner color to blue, and the footer links don't work on mobile…" required></textarea>
+        <div class="flex" style="justify-content: flex-end;">
+          <button type="submit" class="btn btn--primary">add note →</button>
+        </div>
+      </form>
+
+      <div id="notes-area"></div>
+    </div>
+
+    <div class="mt-3" style="text-align: center; font-size: .78rem; color: var(--text-3);">
+      <span class="mono">last updated:</span> <span id="last-updated"></span>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>need anything? email <a href="mailto:obadahabuodeh@gmail.com">obadah</a> or just leave a note above.</small>
+    </div>
+  </footer>
+
+  <script src="assets/data/data.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    const session = GMAI.requireAuth("client");
+    if (!session) { /* redirected */ }
+
+    document.getElementById("nav-user").textContent = "@" + session.username;
+    document.getElementById("logout-btn").addEventListener("click", () => {
+      GMAI.clearSession();
+      window.location.href = "login.html";
+    });
+
+    let _client = null;
+
+    async function render() {
+      const data = await GMAI.loadData();
+      const c = data.clients[session.clientId];
+      if (!c) {
+        GMAI.toast("Client record not found.", "error");
+        return;
+      }
+      _client = c;
+
+      document.getElementById("client-name").textContent = c.name;
+      document.getElementById("client-tagline").textContent = c.tagline || "";
+      document.getElementById("client-status").textContent = c.status || "in progress";
+      document.getElementById("last-updated").textContent = data.lastUpdated || "—";
+
+      // live link
+      const linkArea = document.getElementById("live-link-area");
+      if (c.liveLink) {
+        linkArea.innerHTML = `
+          <a class="btn btn--primary full" href="${GMAI.escapeHtml(c.liveLink)}" target="_blank" rel="noopener">
+            ${GMAI.escapeHtml(c.linkLabel || "open live test launch")} ↗
+          </a>
+          <div class="mt-2 mono" style="font-size:.78rem;color:var(--text-3);text-align:center;word-break:break-all;">
+            ${GMAI.escapeHtml(c.liveLink)}
+          </div>`;
+      } else {
+        linkArea.innerHTML = `<div class="empty-state">no live link yet — we'll post one here as soon as the test launch is up.</div>`;
+      }
+
+      // todos
+      const todos = c.todos || [];
+      const done = todos.filter(t => t.done).length;
+      const total = todos.length;
+      const pct = total === 0 ? 0 : Math.round((done / total) * 100);
+      document.getElementById("todos-done").textContent = done;
+      document.getElementById("todos-total").textContent = total;
+      document.getElementById("progress-bar").style.width = pct + "%";
+      document.getElementById("progress-pct").textContent = pct + "%";
+
+      const area = document.getElementById("todos-area");
+      if (total === 0) {
+        area.innerHTML = `<div class="empty-state">no todos yet. you're either done or we're still planning.</div>`;
+      } else {
+        area.innerHTML = `
+          <table class="todo-table">
+            <thead><tr><th class="check"></th><th>task</th><th style="width:90px;text-align:right;">status</th></tr></thead>
+            <tbody>
+              ${todos.map(t => `
+                <tr class="${t.done ? "done" : ""}">
+                  <td class="check"><input type="checkbox" ${t.done ? "checked" : ""} disabled aria-label="task status (read-only)"/></td>
+                  <td>${GMAI.escapeHtml(t.text)}</td>
+                  <td style="text-align:right;">
+                    <span class="status-pill" style="font-size:.65rem;${t.done ? "color:var(--success);" : ""}">${t.done ? "done" : "in progress"}</span>
+                  </td>
+                </tr>`).join("")}
+            </tbody>
+          </table>`;
+      }
+
+      // notes
+      renderNotes(c.notes || []);
+    }
+
+    function renderNotes(notes) {
+      const area = document.getElementById("notes-area");
+      if (!notes.length) {
+        area.innerHTML = `<div class="empty-state">no notes yet. drop one above whenever something needs attention.</div>`;
+        return;
+      }
+      // newest first
+      const sorted = [...notes].sort((a, b) => (b.createdAt || 0) - (a.createdAt || 0));
+      area.innerHTML = `<div class="notes-list">
+        ${sorted.map(n => `
+          <div class="note">
+            <div class="note__meta">${GMAI.escapeHtml(n.author || "you")} · ${GMAI.fmtDate(n.createdAt)}</div>
+            <div>${GMAI.escapeHtml(n.text)}</div>
+            <button class="note__delete" data-id="${GMAI.escapeHtml(n.id)}" title="delete this note">×</button>
+          </div>`).join("")}
+      </div>`;
+      area.querySelectorAll(".note__delete").forEach(b => {
+        b.addEventListener("click", () => deleteNote(b.dataset.id));
+      });
+    }
+
+    document.getElementById("note-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const txt = document.getElementById("note-text").value.trim();
+      if (!txt) return;
+      const newNote = {
+        id: GMAI.uid(),
+        text: txt,
+        author: session.displayName || session.username,
+        createdAt: Date.now(),
+      };
+      const notes = [..._client.notes || [], newNote];
+      await GMAI.patchData({ clients: { [session.clientId]: { notes } } });
+      document.getElementById("note-text").value = "";
+      GMAI.toast("note added — obadah will see it next time he logs in.", "success");
+      render();
+    });
+
+    async function deleteNote(id) {
+      const notes = (_client.notes || []).filter(n => n.id !== id);
+      await GMAI.patchData({ clients: { [session.clientId]: { notes } } });
+      GMAI.toast("note removed.", "info");
+      render();
+    }
+
+    render();
+  </script>
+</body>
+</html>
+ }
+
+    render();
+  </script>
+</body>
+</html>
