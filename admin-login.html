@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Login | Gray Matter AI</title>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <main class="admin-login-page">
+    <section class="admin-login-section">
+      <div class="admin-login-card">
+        <div class="section-kicker">Admin Access</div>
+
+        <h1>Orders Dashboard Login</h1>
+
+        <p>
+          Sign in to manage project requests and customer orders.
+        </p>
+
+        <form id="adminLoginForm" class="admin-login-form">
+          <label>
+            Email
+            <input type="email" id="adminEmail" required />
+          </label>
+
+          <label>
+            Password
+            <input type="password" id="adminPassword" required />
+          </label>
+
+          <button type="submit" class="request-estimate-btn">
+            Login
+          </button>
+
+          <p id="adminLoginMessage" class="order-message"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/admin-login.js"></script>
+</body>
+</html>
