@@ -953,3 +953,70 @@ if (requestEstimateBtn) {
 }
 
 updateEstimateUI();
+
+const cinematicWhySection = document.querySelector(".why-cinematic-section");
+const cinematicWhyCards = document.querySelectorAll(".why-cinematic-card");
+
+function gmClamp(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+function updateCinematicWhy() {
+  if (!cinematicWhySection) return;
+
+  if (window.innerWidth <= 800) {
+    cinematicWhySection.style.setProperty("--why-logo-scale", 1);
+    cinematicWhySection.style.setProperty("--why-logo-opacity", 1);
+    cinematicWhySection.style.setProperty("--why-logo-y", "0px");
+    cinematicWhySection.style.setProperty("--why-content-opacity", 1);
+    cinematicWhySection.style.setProperty("--why-content-y", "0px");
+    cinematicWhySection.style.setProperty("--why-content-scale", 1);
+
+    cinematicWhyCards.forEach((card) => card.classList.add("is-visible"));
+    return;
+  }
+
+  const rect = cinematicWhySection.getBoundingClientRect();
+  const scrollable = cinematicWhySection.offsetHeight - window.innerHeight;
+  const progress = gmClamp(-rect.top / scrollable, 0, 1);
+
+  /*
+    0.00 - 0.30 logo small to big
+    0.30 - 0.48 logo becomes huge and fades
+    0.48 - 0.60 empty transition
+    0.60 - 1.00 content/cards appear
+  */
+
+  const logoGrow = gmClamp(progress / 0.34, 0, 1);
+  const logoFade = gmClamp((progress - 0.34) / 0.16, 0, 1);
+  const contentReveal = gmClamp((progress - 0.56) / 0.18, 0, 1);
+
+  const logoScale = 0.38 + logoGrow * 9.6;
+  const logoOpacity = 1 - logoFade;
+  const logoY = -logoGrow * 18;
+
+  const contentOpacity = contentReveal;
+  const contentY = 44 - contentReveal * 44;
+  const contentScale = 0.96 + contentReveal * 0.04;
+
+  cinematicWhySection.style.setProperty("--why-logo-scale", logoScale);
+  cinematicWhySection.style.setProperty("--why-logo-opacity", logoOpacity);
+  cinematicWhySection.style.setProperty("--why-logo-y", `${logoY}px`);
+  cinematicWhySection.style.setProperty("--why-content-opacity", contentOpacity);
+  cinematicWhySection.style.setProperty("--why-content-y", `${contentY}px`);
+  cinematicWhySection.style.setProperty("--why-content-scale", contentScale);
+
+  cinematicWhyCards.forEach((card, index) => {
+    const start = 0.63 + index * 0.045;
+
+    if (progress >= start) {
+      card.classList.add("is-visible");
+    } else {
+      card.classList.remove("is-visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", updateCinematicWhy);
+window.addEventListener("resize", updateCinematicWhy);
+updateCinematicWhy();

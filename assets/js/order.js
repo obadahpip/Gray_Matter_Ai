@@ -141,9 +141,22 @@ if (orderForm) {
     event.preventDefault();
 
     if (!estimate) {
-      orderMessage.textContent = "Please create an estimate first.";
-      orderMessage.className = "order-message error";
-      return;
+      orderMessage.innerHTML = `
+  <div class="order-success-box">
+    <div class="order-success-icon">✓</div>
+    <h3>Thank you!</h3>
+    <p>Your project request was submitted successfully.</p>
+    <p>Our team will review your request and contact you soon.</p>
+    <a href="index.html" class="order-success-btn">Back to Home</a>
+  </div>
+`;
+
+orderMessage.className = "order-message success";
+
+localStorage.removeItem("gmEstimate");
+
+orderForm.reset();
+return;
     }
 
     const orderData = {

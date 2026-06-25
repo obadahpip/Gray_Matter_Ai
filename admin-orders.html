@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Orders | Gray Matter AI</title>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+    <main class="admin-orders-page">
+        <section class="admin-orders-section">
+            <div class="admin-orders-header">
+                <div>
+                    <div class="section-kicker">Admin Dashboard</div>
+                    <h1>Project Orders</h1>
+                    <p>View and manage project estimate requests.</p>
+                </div>
+
+                <button type="button" id="adminLogoutBtn" class="admin-logout-btn">
+                    Logout
+                </button>
+            </div>
+
+            <div id="adminOrdersMessage" class="order-message">
+                Loading orders...
+            </div>
+
+            <div class="admin-orders-table-wrap">
+                <table class="admin-orders-table">
+                    <thead>
+                        <tr>
+                            <th>Client</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Total</th>
+                            <th>Status</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="adminOrdersTableBody">
+                    </tbody>
+                </table>
+            </div>
+            <div class="admin-order-modal" id="adminOrderModal">
+                <div class="admin-order-backdrop" data-close-order-modal></div>
+
+                <div class="admin-order-box">
+                    <button type="button" class="admin-order-close" data-close-order-modal>
+                        ×
+                    </button>
+
+                    <span class="section-kicker">Order Details</span>
+                    <h2 id="orderModalClientName">Client name</h2>
+
+                    <div id="orderModalContent" class="order-modal-content"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/admin-orders.js"></script>
+</body>
+
+</html>
