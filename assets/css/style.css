@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
 :root {
   --page-bg: #e9edf8;
   --dark: #03040a;
@@ -24,13 +26,14 @@ html {
 
 body {
   min-height: 100vh;
-  font-family: Inter,
+  font-family: "Space Grotesk",
     ui-sans-serif,
     system-ui,
     -apple-system,
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+  font-size: 12.6px;
   background: var(--page-bg);
   color: var(--ink);
   overflow-x: hidden;
@@ -63,7 +66,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 13px;
-  font-size: 21px;
+  font-size: 18.5px;
   font-weight: 800;
   letter-spacing: -0.04em;
 }
@@ -82,7 +85,7 @@ img {
   display: flex;
   align-items: center;
   gap: 30px;
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 600;
 }
 
@@ -350,14 +353,14 @@ img {
 
 .hero-badge span {
   color: rgba(255, 255, 255, 0.78);
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .hero-content h1 {
-  font-size: clamp(36px, 4.4vw, 58px);
+  font-size: clamp(30.6px, 4.4vw, 47.6px);
   line-height: 1.05;
   font-weight: 600;
   letter-spacing: -0.055em;
@@ -369,7 +372,7 @@ img {
   max-width: 700px;
   margin: 22px auto 0;
   color: rgba(255, 255, 255, 0.86);
-  font-size: 15px;
+  font-size: 13.5px;
   line-height: 1.6;
   font-weight: 500;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
@@ -406,7 +409,7 @@ img {
   width: 48px;
   border-left: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 0 14px 14px 0;
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .hero-dashboard {
@@ -472,7 +475,7 @@ img {
   justify-content: center;
   gap: 7px;
   color: var(--white);
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 800;
 }
 
@@ -531,7 +534,7 @@ img {
   display: block;
   margin-bottom: 5px;
   color: #93c5fd;
-  font-size: 11px;
+  font-size: 10.4px;
   font-weight: 850;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -539,7 +542,7 @@ img {
 
 .gm-screen-header h3 {
   color: var(--white);
-  font-size: 18px;
+  font-size: 15.8px;
   line-height: 1.1;
 }
 
@@ -548,7 +551,7 @@ img {
   border-radius: var(--radius-pill);
   background: linear-gradient(135deg, #2563eb, #38bdf8);
   color: var(--white);
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 800;
   white-space: nowrap;
 }
@@ -593,11 +596,11 @@ img {
 .gm-step-card strong,
 .gm-service-row strong {
   color: var(--white);
-  font-size: 13px;
+  font-size: 11.7px;
 }
 
 .gm-service-row strong {
-  font-size: 15px;
+  font-size: 13.5px;
   font-weight: 850;
 }
 
@@ -656,7 +659,7 @@ img {
   border-radius: var(--radius-pill);
   background: rgba(56, 189, 248, 0.08);
   color: #93c5fd;
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 850;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -669,7 +672,7 @@ img {
 }
 
 .services-title-wrap h2 {
-  font-size: clamp(44px, 6vw, 76px);
+  font-size: clamp(36.1px, 6vw, 62.3px);
   line-height: 1.02;
   letter-spacing: -0.07em;
 }
@@ -678,7 +681,7 @@ img {
   max-width: 760px;
   margin: 20px auto 0;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 17px;
+  font-size: 15.3px;
   line-height: 1.75;
 }
 
@@ -699,7 +702,7 @@ img {
   background: transparent;
   color: var(--white);
   font: inherit;
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 800;
   white-space: nowrap;
   cursor: pointer;
@@ -748,13 +751,13 @@ img {
   display: inline-flex;
   margin-bottom: 18px;
   color: #2563eb;
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 900;
   letter-spacing: 0.14em;
 }
 
 .service-info h3 {
-  font-size: clamp(38px, 4.3vw, 58px);
+  font-size: clamp(32.3px, 4.3vw, 47.6px);
   line-height: 0.98;
   letter-spacing: -0.07em;
 }
@@ -762,7 +765,7 @@ img {
 .service-info > p {
   margin-top: 22px;
   color: #334155;
-  font-size: 17px;
+  font-size: 15.3px;
   line-height: 1.7;
 }
 
@@ -778,7 +781,7 @@ img {
   display: block;
   margin-bottom: 8px;
   color: #2563eb;
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -842,7 +845,7 @@ img {
 }
 
 .build-heading h2 {
-  font-size: clamp(44px, 6vw, 76px);
+  font-size: clamp(36.1px, 6vw, 62.3px);
   line-height: 1.02;
   letter-spacing: -0.07em;
 }
@@ -851,7 +854,7 @@ img {
   max-width: 720px;
   margin: 20px auto 0;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 17px;
+  font-size: 15.3px;
   line-height: 1.75;
 }
 
@@ -938,14 +941,14 @@ img {
   display: block;
   margin-bottom: 14px;
   color: #93c5fd;
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 900;
   letter-spacing: 0.14em;
 }
 
 .build-left h3 {
   max-width: 360px;
-  font-size: clamp(30px, 3.3vw, 44px);
+  font-size: clamp(25.5px, 3.3vw, 36.1px);
   line-height: 1.04;
   letter-spacing: -0.06em;
 }
@@ -1234,7 +1237,7 @@ img {
 
 .commerce-products strong {
   color: #fff;
-  font-size: 12px;
+  font-size: 11.4px;
 }
 
 .commerce-cart {
@@ -1261,7 +1264,7 @@ img {
   border-radius: 11px;
   background: linear-gradient(135deg, #2563eb, #22c55e);
   color: #fff;
-  font-size: 11px;
+  font-size: 10.4px;
   font-weight: 850;
 }
 
@@ -1330,7 +1333,7 @@ img {
 
 .build-right > p {
   color: rgba(255, 255, 255, 0.76);
-  font-size: 16px;
+  font-size: 14.4px;
   line-height: 1.68;
 }
 
@@ -1346,7 +1349,7 @@ img {
   display: block;
   margin-bottom: 8px;
   color: #93c5fd;
-  font-size: 11px;
+  font-size: 10.4px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -1354,7 +1357,7 @@ img {
 
 .build-best p {
   color: rgba(255, 255, 255, 0.66);
-  font-size: 13px;
+  font-size: 11.7px;
   line-height: 1.55;
 }
 
@@ -1364,7 +1367,7 @@ img {
   margin-top: 22px;
   color: var(--white);
   font-weight: 850;
-  font-size: 14px;
+  font-size: 12.6px;
 }
 
 .build-bottom {
@@ -1395,7 +1398,7 @@ img {
   background: transparent;
   color: rgba(255, 255, 255, 0.46);
   font: inherit;
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 800;
   white-space: nowrap;
   cursor: pointer;
@@ -1428,7 +1431,7 @@ img {
   border-radius: 14px;
   background: #03040a;
   color: var(--white);
-  font-size: 32px;
+  font-size: 27.2px;
   line-height: 1;
   cursor: pointer;
   transition: transform 0.25s ease,
@@ -1454,12 +1457,12 @@ img {
   }
 
   .build-heading h2 {
-    font-size: clamp(34px, 6vw, 52px);
+    font-size: clamp(28.9px, 6vw, 42.6px);
     letter-spacing: -0.055em;
   }
 
   .build-heading p {
-    font-size: 15px;
+    font-size: 13.5px;
     line-height: 1.65;
   }
 
@@ -1482,7 +1485,7 @@ img {
 
   .build-left h3 {
     max-width: 100%;
-    font-size: 32px;
+    font-size: 27.2px;
     line-height: 1.08;
     letter-spacing: -0.05em;
   }
@@ -1506,7 +1509,7 @@ img {
   }
 
   .build-right > p {
-    font-size: 14px;
+    font-size: 12.6px;
     line-height: 1.55;
   }
 
@@ -1516,7 +1519,7 @@ img {
   }
 
   .build-best p {
-    font-size: 12px;
+    font-size: 11.4px;
     line-height: 1.45;
   }
 
@@ -1531,13 +1534,13 @@ img {
   }
 
   .build-tab {
-    font-size: 12px;
+    font-size: 11.4px;
   }
 
   .build-arrow {
     width: 46px;
     height: 46px;
-    font-size: 30px;
+    font-size: 25.5px;
   }
 
   .build-dots {
@@ -1569,7 +1572,7 @@ img {
   }
 
   .service-info h3 {
-    font-size: clamp(34px, 6vw, 48px);
+    font-size: clamp(28.9px, 6vw, 39.4px);
   }
 }
 
@@ -1644,13 +1647,13 @@ img {
   }
 
   .hero-content h1 {
-    font-size: clamp(34px, 10vw, 48px);
+    font-size: clamp(28.9px, 10vw, 39.4px);
     line-height: 1.08;
   }
 
   .hero-content p {
     max-width: 100%;
-    font-size: 14px;
+    font-size: 12.6px;
     line-height: 1.7;
   }
 
@@ -1676,7 +1679,7 @@ img {
 
   .gm-screen-brand {
     justify-content: flex-start;
-    font-size: 11px;
+    font-size: 10.4px;
   }
 
   .gm-screen-content {
@@ -1695,11 +1698,11 @@ img {
   }
 
   .gm-screen-header h3 {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   .gm-status-pill {
-    font-size: 11px;
+    font-size: 10.4px;
     padding: 8px 10px;
   }
 
@@ -1717,7 +1720,7 @@ img {
 
   .gm-step-card strong,
 .gm-service-row strong {
-    font-size: 12px;
+    font-size: 11.4px;
   }
 
   .gm-laptop-base {
@@ -1742,13 +1745,13 @@ img {
   }
 
   .build-heading h2 {
-    font-size: 30px;
+    font-size: 25.5px;
     line-height: 1.05;
     letter-spacing: -0.045em;
   }
 
   .build-heading p {
-    font-size: 13px;
+    font-size: 11.7px;
     line-height: 1.6;
   }
 
@@ -1775,7 +1778,7 @@ img {
   }
 
   .build-left h3 {
-    font-size: 24px;
+    font-size: 21.1px;
     line-height: 1.08;
     letter-spacing: -0.04em;
   }
@@ -1887,7 +1890,7 @@ img {
   }
 
   .build-right > p {
-    font-size: 12px;
+    font-size: 11.4px;
     line-height: 1.5;
   }
 
@@ -1909,7 +1912,7 @@ img {
 
   .build-link {
     margin-top: 12px;
-    font-size: 11.5px;
+    font-size: 10.9px;
   }
 
   .build-bottom {
@@ -1942,7 +1945,7 @@ img {
     width: 38px;
     height: 38px;
     border-radius: 12px;
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .services-section {
@@ -1954,11 +1957,11 @@ img {
   }
 
   .services-title-wrap h2 {
-    font-size: 38px;
+    font-size: 32.3px;
   }
 
   .services-title-wrap p {
-    font-size: 15px;
+    font-size: 13.5px;
   }
 
   .service-tabs {
@@ -1969,7 +1972,7 @@ img {
   .service-tab {
     min-height: 38px;
     padding: 0 13px;
-    font-size: 12px;
+    font-size: 11.4px;
   }
 
   .service-feature-card {
@@ -1996,12 +1999,12 @@ img {
   }
 
   .service-info h3 {
-    font-size: 32px;
+    font-size: 27.2px;
     line-height: 1;
   }
 
   .service-info > p {
-    font-size: 15px;
+    font-size: 13.5px;
     line-height: 1.65;
   }
 
@@ -2027,7 +2030,7 @@ img {
   }
 
   .brand span {
-    font-size: 18px;
+    font-size: 15.8px;
   }
 
   .brand img {
@@ -2041,11 +2044,11 @@ img {
   }
 
   .hero-content h1 {
-    font-size: 30px;
+    font-size: 25.5px;
   }
 
   .hero-content p {
-    font-size: 13px;
+    font-size: 11.7px;
   }
 
   .hero-btn-primary,
@@ -2071,7 +2074,7 @@ img {
   }
 
   .build-left h3 {
-    font-size: 22px;
+    font-size: 19.4px;
   }
 
   .build-visual-art {
@@ -2091,7 +2094,7 @@ img {
   }
 
   .service-info h3 {
-    font-size: 28px;
+    font-size: 24.6px;
   }
 }
 
@@ -2133,7 +2136,7 @@ img {
 
   .build-left h3 {
     max-width: 100% !important;
-    font-size: 22px !important;
+    font-size: 19.4px !important;
     line-height: 1.12 !important;
     letter-spacing: -0.04em !important;
     margin: 0 !important;
@@ -2190,7 +2193,7 @@ img {
   }
 
   .build-right > p {
-    font-size: 11.5px !important;
+    font-size: 10.9px !important;
     line-height: 1.5 !important;
     margin: 0 !important;
   }
@@ -2213,7 +2216,7 @@ img {
 
   .build-link {
     margin-top: 11px !important;
-    font-size: 11px !important;
+    font-size: 10.4px !important;
   }
 
   .build-bottom {
@@ -2241,7 +2244,7 @@ img {
   .build-arrow {
     width: 36px !important;
     height: 36px !important;
-    font-size: 24px !important;
+    font-size: 21.1px !important;
   }
 }
 
@@ -2253,7 +2256,7 @@ img {
   }
 
   .build-left h3 {
-    font-size: 20px !important;
+    font-size: 17.6px !important;
   }
 
   .build-visual-art {
@@ -2289,7 +2292,7 @@ img {
 }
 
 .pricing-header h2 {
-  font-size: clamp(44px, 6vw, 76px);
+  font-size: clamp(36.1px, 6vw, 62.3px);
   line-height: 1.02;
   letter-spacing: -0.07em;
 }
@@ -2298,7 +2301,7 @@ img {
   max-width: 720px;
   margin: 20px auto 0;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 17px;
+  font-size: 15.3px;
   line-height: 1.75;
 }
 
@@ -2333,7 +2336,7 @@ img {
   display: inline-flex;
   margin-bottom: 12px;
   color: #93c5fd;
-  font-size: 12px;
+  font-size: 11.4px;
   font-weight: 900;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -2346,7 +2349,7 @@ img {
   border-radius: 999px;
   background: rgba(56, 189, 248, 0.1);
   color: #93c5fd;
-  font-size: 11px;
+  font-size: 10.4px;
   font-weight: 900;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2354,7 +2357,7 @@ img {
 
 .estimate-panel h3 {
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 25.5px;
   line-height: 1.1;
   letter-spacing: -0.05em;
 }
@@ -2372,13 +2375,13 @@ img {
   display: block;
   margin-bottom: 8px;
   color: rgba(255, 255, 255, 0.58);
-  font-size: 13px;
+  font-size: 11.7px;
   font-weight: 750;
 }
 
 .total-box strong {
   display: block;
-  font-size: 46px;
+  font-size: 37.7px;
   line-height: 1;
   letter-spacing: -0.06em;
   font-weight: 950;
@@ -2389,7 +2392,7 @@ img {
   margin-top: 10px;
   color: #93c5fd;
   font-style: normal;
-  font-size: 14px;
+  font-size: 12.6px;
   font-weight: 750;
 }
 
@@ -2407,7 +2410,7 @@ img {
   justify-content: space-between;
   gap: 16px;
   color: rgba(255, 255, 255, 0.68);
-  font-size: 14px;
+  font-size: 12.6px;
   line-height: 1.45;
 }
 
@@ -2422,7 +2425,7 @@ img {
 
 .breakdown-box h4 {
   margin-bottom: 12px;
-  font-size: 16px;
+  font-size: 14.4px;
 }
 
 #estimateBreakdown {
@@ -2438,7 +2441,7 @@ img {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.045);
   color: rgba(255, 255, 255, 0.7);
-  font-size: 13px;
+  font-size: 11.7px;
   line-height: 1.4;
 }
 
@@ -2447,7 +2450,7 @@ img {
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.045);
   color: rgba(255, 255, 255, 0.58);
-  font-size: 12.5px;
+  font-size: 11.9px;
   line-height: 1.55;
   margin-bottom: 20px;
 }
@@ -2500,13 +2503,13 @@ img {
   }
 
   .pricing-header h2 {
-    font-size: 34px;
+    font-size: 28.9px;
     line-height: 1.04;
     letter-spacing: -0.055em;
   }
 
   .pricing-header p {
-    font-size: 14px;
+    font-size: 12.6px;
     line-height: 1.6;
   }
 
@@ -2517,15 +2520,15 @@ img {
   }
 
   .estimate-panel h3 {
-    font-size: 25px;
+    font-size: 22px;
   }
 
   .total-box strong {
-    font-size: 38px;
+    font-size: 32.3px;
   }
 
   .summary-row {
-    font-size: 13px;
+    font-size: 11.7px;
   }
 }
 
@@ -2588,7 +2591,7 @@ img {
 .estimate-panel h2 {
   margin: 0 0 10px;
   color: #ffffff;
-  font-size: 42px;
+  font-size: 35.7px;
   line-height: 1.1;
 }
 
@@ -2596,7 +2599,7 @@ img {
   margin-top: auto;
   padding-top: 20px;
   color: #8ea6c7;
-  font-size: 14px;
+  font-size: 12.6px;
   line-height: 1.6;
 }
 
@@ -2613,7 +2616,7 @@ img {
   }
 
   .estimate-panel h2 {
-    font-size: 30px;
+    font-size: 25.5px;
   }
 }
 
@@ -2639,7 +2642,7 @@ img {
 }
 
 .pricing-header h2 {
-  font-size: clamp(44px, 6vw, 76px) !important;
+  font-size: clamp(36.1px, 6vw, 62.3px) !important;
   line-height: 1.02 !important;
   letter-spacing: -0.07em !important;
   color: var(--white) !important;
@@ -2649,7 +2652,7 @@ img {
   max-width: 720px !important;
   margin: 20px auto 0 !important;
   color: rgba(255, 255, 255, 0.68) !important;
-  font-size: 17px !important;
+  font-size: 15.3px !important;
   line-height: 1.75 !important;
 }
 
@@ -2699,7 +2702,7 @@ img {
   display: inline-flex !important;
   margin-bottom: 10px !important;
   color: #93c5fd !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 900 !important;
   letter-spacing: 0.13em !important;
   text-transform: uppercase !important;
@@ -2707,7 +2710,7 @@ img {
 
 .calculator-dropdown-block h3 {
   margin: 0 0 18px !important;
-  font-size: 27px !important;
+  font-size: 23.8px !important;
   line-height: 1.12 !important;
   letter-spacing: -0.04em !important;
   color: var(--white) !important;
@@ -2738,13 +2741,13 @@ img {
 }
 
 .addons-dropdown summary span {
-  font-size: 15px !important;
+  font-size: 13.5px !important;
   font-weight: 850 !important;
 }
 
 .addons-dropdown summary strong {
   color: #93c5fd !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -2792,7 +2795,7 @@ img {
 
 .addon-dropdown-item span {
   color: rgba(255, 255, 255, 0.84) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 750 !important;
   line-height: 1.3 !important;
 }
@@ -2800,7 +2803,7 @@ img {
 .addon-dropdown-item em {
   color: #93c5fd !important;
   font-style: normal !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -2816,7 +2819,7 @@ img {
   border-radius: 999px !important;
   background: rgba(56, 189, 248, 0.1) !important;
   color: #93c5fd !important;
-  font-size: 11px !important;
+  font-size: 10.4px !important;
   font-weight: 900 !important;
   letter-spacing: 0.12em !important;
   text-transform: uppercase !important;
@@ -2824,7 +2827,7 @@ img {
 
 .estimate-panel h3 {
   margin: 0 0 20px !important;
-  font-size: 30px !important;
+  font-size: 25.5px !important;
   line-height: 1.1 !important;
   letter-spacing: -0.05em !important;
   color: var(--white) !important;
@@ -2843,13 +2846,13 @@ img {
   display: block !important;
   margin-bottom: 8px !important;
   color: rgba(255, 255, 255, 0.58) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 750 !important;
 }
 
 .total-box strong {
   display: block !important;
-  font-size: 46px !important;
+  font-size: 37.7px !important;
   line-height: 1 !important;
   letter-spacing: -0.06em !important;
   font-weight: 950 !important;
@@ -2861,7 +2864,7 @@ img {
   margin-top: 10px !important;
   color: #93c5fd !important;
   font-style: normal !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 750 !important;
 }
 
@@ -2879,7 +2882,7 @@ img {
   justify-content: space-between !important;
   gap: 16px !important;
   color: rgba(255, 255, 255, 0.68) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.45 !important;
 }
 
@@ -2894,7 +2897,7 @@ img {
 
 .breakdown-box h4 {
   margin-bottom: 12px !important;
-  font-size: 16px !important;
+  font-size: 14.4px !important;
   color: var(--white) !important;
 }
 
@@ -2923,7 +2926,7 @@ img {
   border-radius: 14px !important;
   background: rgba(255, 255, 255, 0.045) !important;
   color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   line-height: 1.4 !important;
 }
 
@@ -2942,7 +2945,7 @@ img {
   border-radius: 18px !important;
   background: rgba(255, 255, 255, 0.045) !important;
   color: rgba(255, 255, 255, 0.58) !important;
-  font-size: 12.5px !important;
+  font-size: 11.9px !important;
   line-height: 1.55 !important;
   margin-bottom: 20px !important;
 }
@@ -2996,13 +2999,13 @@ img {
   }
 
   .pricing-header h2 {
-    font-size: 34px !important;
+    font-size: 28.9px !important;
     line-height: 1.04 !important;
     letter-spacing: -0.055em !important;
   }
 
   .pricing-header p {
-    font-size: 14px !important;
+    font-size: 12.6px !important;
     line-height: 1.6 !important;
   }
 
@@ -3018,12 +3021,12 @@ img {
   }
 
   .calculator-dropdown-block h3 {
-    font-size: 22px !important;
+    font-size: 19.4px !important;
   }
 
   .addons-dropdown summary {
     min-height: 54px !important;
-    font-size: 13px !important;
+    font-size: 11.7px !important;
   }
 
   .addons-dropdown summary {
@@ -3046,15 +3049,15 @@ img {
   }
 
   .estimate-panel h3 {
-    font-size: 25px !important;
+    font-size: 22px !important;
   }
 
   .total-box strong {
-    font-size: 38px !important;
+    font-size: 32.3px !important;
   }
 
   .summary-row {
-    font-size: 13px !important;
+    font-size: 11.7px !important;
   }
 }
 
@@ -3085,7 +3088,7 @@ img {
 .tier-dropdown summary span {
   min-width: 0 !important;
   color: var(--white) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 850 !important;
   line-height: 1.3 !important;
 }
@@ -3093,7 +3096,7 @@ img {
 .tier-dropdown summary strong {
   flex: 0 0 auto !important;
   color: #93c5fd !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3132,7 +3135,7 @@ img {
 .tier-dropdown-item span {
   min-width: 0 !important;
   color: rgba(255, 255, 255, 0.86) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 750 !important;
   line-height: 1.35 !important;
 }
@@ -3140,7 +3143,7 @@ img {
 .tier-dropdown-item em {
   color: #93c5fd !important;
   font-style: normal !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3192,7 +3195,7 @@ img {
 .maintenance-dropdown summary span {
   min-width: 0 !important;
   color: var(--white) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 850 !important;
   line-height: 1.3 !important;
 }
@@ -3200,7 +3203,7 @@ img {
 .maintenance-dropdown summary strong {
   flex: 0 0 auto !important;
   color: #93c5fd !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3238,7 +3241,7 @@ img {
 
 .maintenance-dropdown-item span {
   color: rgba(255, 255, 255, 0.86) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 750 !important;
   line-height: 1.35 !important;
 }
@@ -3246,7 +3249,7 @@ img {
 .maintenance-dropdown-item em {
   color: #93c5fd !important;
   font-style: normal !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3267,17 +3270,17 @@ img {
 }
 
 main section:not(.hero-scroll) h2 {
-  font-size: clamp(32px, 4.5vw, 56px) !important;
+  font-size: clamp(27.2px, 4.5vw, 45.9px) !important;
   line-height: 1.05 !important;
 }
 
 main section:not(.hero-scroll) h3 {
-  font-size: clamp(22px, 2.8vw, 34px) !important;
+  font-size: clamp(19.4px, 2.8vw, 28.9px) !important;
   line-height: 1.12 !important;
 }
 
 main section:not(.hero-scroll) p {
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.6 !important;
 }
 
@@ -3291,113 +3294,113 @@ main section:not(.hero-scroll) em,
 main section:not(.hero-scroll) select,
 main section:not(.hero-scroll) input,
 main section:not(.hero-scroll) textarea {
-  font-size: 13px !important;
+  font-size: 11.7px !important;
 }
 
 main section:not(.hero-scroll) .services-title-wrap h2,
 main section:not(.hero-scroll) .build-heading h2,
 main section:not(.hero-scroll) .pricing-header h2 {
-  font-size: clamp(34px, 5vw, 58px) !important;
+  font-size: clamp(28.9px, 5vw, 47.6px) !important;
 }
 
 main section:not(.hero-scroll) .services-title-wrap p,
 main section:not(.hero-scroll) .build-heading p,
 main section:not(.hero-scroll) .pricing-header p {
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.6 !important;
 }
 
 main section:not(.hero-scroll) .service-info h3 {
-  font-size: clamp(30px, 3.6vw, 44px) !important;
+  font-size: clamp(25.5px, 3.6vw, 36.1px) !important;
 }
 
 main section:not(.hero-scroll) .service-info > p {
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.6 !important;
 }
 
 main section:not(.hero-scroll) .service-tab {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 main section:not(.hero-scroll) .build-left h3 {
-  font-size: clamp(24px, 3vw, 36px) !important;
+  font-size: clamp(21.1px, 3vw, 30.6px) !important;
 }
 
 main section:not(.hero-scroll) .build-right > p {
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   line-height: 1.55 !important;
 }
 
 main section:not(.hero-scroll) .build-best p {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 main section:not(.hero-scroll) .calculator-dropdown-block h3 {
-  font-size: 22px !important;
+  font-size: 19.4px !important;
 }
 
 main section:not(.hero-scroll) .tier-dropdown summary span,
 main section:not(.hero-scroll) .addons-dropdown summary span,
 main section:not(.hero-scroll) .maintenance-dropdown summary span {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 main section:not(.hero-scroll) .addon-dropdown-item span,
 main section:not(.hero-scroll) .tier-dropdown-item span,
 main section:not(.hero-scroll) .maintenance-dropdown-item span {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 main section:not(.hero-scroll) .addon-dropdown-item em,
 main section:not(.hero-scroll) .tier-dropdown-item em,
 main section:not(.hero-scroll) .maintenance-dropdown-item em {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 main section:not(.hero-scroll) .estimate-panel h3 {
-  font-size: 24px !important;
+  font-size: 21.1px !important;
 }
 
 main section:not(.hero-scroll) .total-box strong {
-  font-size: 36px !important;
+  font-size: 30.6px !important;
 }
 
 main section:not(.hero-scroll) #estimateBreakdown p {
-  font-size: 12px !important;
+  font-size: 11.4px !important;
 }
 
 @media (max-width: 768px) {
   main section:not(.hero-scroll) h2 {
-    font-size: 28px !important;
+    font-size: 24.6px !important;
   }
 
   main section:not(.hero-scroll) h3 {
-    font-size: 20px !important;
+    font-size: 17.6px !important;
   }
 
   main section:not(.hero-scroll) p {
-    font-size: 12.5px !important;
+    font-size: 11.9px !important;
   }
 
   main section:not(.hero-scroll) .services-title-wrap h2,
 main section:not(.hero-scroll) .build-heading h2,
 main section:not(.hero-scroll) .pricing-header h2 {
-    font-size: 28px !important;
+    font-size: 24.6px !important;
   }
 
   main section:not(.hero-scroll) .services-title-wrap p,
 main section:not(.hero-scroll) .build-heading p,
 main section:not(.hero-scroll) .pricing-header p {
-    font-size: 12.5px !important;
+    font-size: 11.9px !important;
   }
 
   main section:not(.hero-scroll) .calculator-dropdown-block h3 {
-    font-size: 18px !important;
+    font-size: 15.8px !important;
   }
 
   main section:not(.hero-scroll) .total-box strong {
-    font-size: 30px !important;
+    font-size: 25.5px !important;
   }
 }
 /* =========================
@@ -3418,14 +3421,14 @@ main section:not(.hero-scroll) .pricing-header p {
 
 .addon-copy strong {
   color: rgba(255, 255, 255, 0.9) !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 850 !important;
   line-height: 1.35 !important;
 }
 
 .addon-copy small {
   color: rgba(255, 255, 255, 0.52) !important;
-  font-size: 11px !important;
+  font-size: 10.4px !important;
   line-height: 1.45 !important;
   font-weight: 500 !important;
 }
@@ -3433,7 +3436,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .addon-video-link {
   width: fit-content !important;
   color: #93c5fd !important;
-  font-size: 11px !important;
+  font-size: 10.4px !important;
   font-weight: 800 !important;
   text-decoration: none !important;
 }
@@ -3472,7 +3475,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .hosting-dropdown summary span {
   min-width: 0 !important;
   color: var(--white) !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 850 !important;
   line-height: 1.3 !important;
 }
@@ -3480,7 +3483,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .hosting-dropdown summary strong {
   flex: 0 0 auto !important;
   color: #93c5fd !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3518,7 +3521,7 @@ main section:not(.hero-scroll) .pricing-header p {
 
 .hosting-dropdown-item span {
   color: rgba(255, 255, 255, 0.86) !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 750 !important;
   line-height: 1.35 !important;
 }
@@ -3526,7 +3529,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .hosting-dropdown-item em {
   color: #93c5fd !important;
   font-style: normal !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 900 !important;
   white-space: nowrap !important;
 }
@@ -3560,7 +3563,7 @@ main section:not(.hero-scroll) .pricing-header p {
   border: 1px solid rgba(255, 255, 255, 0.18) !important;
   background: rgba(255, 255, 255, 0.06) !important;
   color: rgba(255, 255, 255, 0.78) !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 800 !important;
   line-height: 1 !important;
   display: inline-flex !important;
@@ -3620,7 +3623,7 @@ main section:not(.hero-scroll) .pricing-header p {
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
   background: rgba(255, 255, 255, 0.06) !important;
   color: #ffffff !important;
-  font-size: 22px !important;
+  font-size: 19.4px !important;
   cursor: pointer !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -3634,7 +3637,7 @@ main section:not(.hero-scroll) .pricing-header p {
   border-radius: 999px !important;
   background: rgba(59, 130, 246, 0.12) !important;
   color: #bfdbfe !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 800 !important;
   letter-spacing: 0.08em !important;
   text-transform: uppercase !important;
@@ -3643,14 +3646,14 @@ main section:not(.hero-scroll) .pricing-header p {
 .addon-info-box h3 {
   margin: 0 42px 10px 0 !important;
   color: #ffffff !important;
-  font-size: clamp(24px, 4vw, 34px) !important;
+  font-size: clamp(21.1px, 4vw, 28.9px) !important;
   line-height: 1.1 !important;
 }
 
 .addon-info-box p {
   margin: 0 0 20px !important;
   color: rgba(255, 255, 255, 0.68) !important;
-  font-size: 15px !important;
+  font-size: 13.5px !important;
   line-height: 1.7 !important;
 }
 
@@ -3684,7 +3687,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .addon-info-text li {
   margin-bottom: 10px !important;
   color: rgba(255, 255, 255, 0.76) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.55 !important;
 }
 
@@ -3703,7 +3706,7 @@ main section:not(.hero-scroll) .pricing-header p {
   }
 
   .addon-info-box h3 {
-    font-size: 24px !important;
+    font-size: 21.1px !important;
   }
 }
 .step-title-with-info {
@@ -3745,7 +3748,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .hosting-toggle-note {
   margin: 8px 0 0 !important;
   color: rgba(255, 255, 255, 0.52) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   line-height: 1.5 !important;
 }
 
@@ -3795,7 +3798,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .hosting-switch strong {
   min-width: 28px !important;
   color: rgba(255, 255, 255, 0.82) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
 }
@@ -3855,7 +3858,7 @@ main section:not(.hero-scroll) .pricing-header p {
   display: grid !important;
   gap: 8px !important;
   color: rgba(255, 255, 255, 0.78) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 700 !important;
 }
 
@@ -3878,7 +3881,7 @@ main section:not(.hero-scroll) .pricing-header p {
 
 .order-message {
   margin: 0 !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   color: rgba(255, 255, 255, 0.7) !important;
 }
 
@@ -3910,7 +3913,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .order-form h2 {
   margin: 0 0 20px !important;
   color: #ffffff !important;
-  font-size: clamp(28px, 4vw, 42px) !important;
+  font-size: clamp(24.6px, 4vw, 35.7px) !important;
   line-height: 1.1 !important;
 }
 
@@ -3930,12 +3933,12 @@ main section:not(.hero-scroll) .pricing-header p {
 
 .order-summary-list span {
   color: rgba(255, 255, 255, 0.62) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
 }
 
 .order-summary-list strong {
   color: #ffffff !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 800 !important;
   text-align: right !important;
 }
@@ -3951,21 +3954,21 @@ main section:not(.hero-scroll) .pricing-header p {
 .order-summary-total span {
   display: block !important;
   color: rgba(255, 255, 255, 0.65) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   margin-bottom: 6px !important;
 }
 
 .order-summary-total strong {
   display: block !important;
   color: #ffffff !important;
-  font-size: 30px !important;
+  font-size: 25.5px !important;
   font-weight: 900 !important;
   margin-bottom: 6px !important;
 }
 
 .order-summary-total small {
   color: rgba(255, 255, 255, 0.62) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
 }
 
 @media (max-width: 900px) {
@@ -3998,7 +4001,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .admin-orders-header h1 {
   margin: 12px 0 8px !important;
   color: #ffffff !important;
-  font-size: clamp(34px, 5vw, 58px) !important;
+  font-size: clamp(28.9px, 5vw, 47.6px) !important;
 }
 
 .admin-orders-header p {
@@ -4035,12 +4038,12 @@ main section:not(.hero-scroll) .pricing-header p {
   text-align: left !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
   color: rgba(255, 255, 255, 0.78) !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
 }
 
 .admin-orders-table th {
   color: rgba(255, 255, 255, 0.5) !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   text-transform: uppercase !important;
   letter-spacing: 0.08em !important;
 }
@@ -4063,7 +4066,7 @@ main section:not(.hero-scroll) .pricing-header p {
   border-radius: 999px !important;
   background: rgba(59, 130, 246, 0.12) !important;
   color: #bfdbfe !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 800 !important;
   text-transform: capitalize !important;
 }
@@ -4089,7 +4092,7 @@ main section:not(.hero-scroll) .pricing-header p {
   color: #bfdbfe !important;
   border-radius: 999px !important;
   padding: 8px 13px !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 900 !important;
   cursor: pointer !important;
 }
@@ -4137,14 +4140,14 @@ main section:not(.hero-scroll) .pricing-header p {
   border: 1px solid rgba(255, 255, 255, 0.14) !important;
   background: rgba(255, 255, 255, 0.06) !important;
   color: #ffffff !important;
-  font-size: 22px !important;
+  font-size: 19.4px !important;
   cursor: pointer !important;
 }
 
 .admin-order-box h2 {
   margin: 12px 42px 24px 0 !important;
   color: #ffffff !important;
-  font-size: 34px !important;
+  font-size: 28.9px !important;
 }
 
 .order-modal-content {
@@ -4168,7 +4171,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .order-modal-card h3 {
   margin: 0 0 14px !important;
   color: #ffffff !important;
-  font-size: 18px !important;
+  font-size: 15.8px !important;
 }
 
 .order-modal-card p {
@@ -4206,7 +4209,7 @@ main section:not(.hero-scroll) .pricing-header p {
   display: grid !important;
   gap: 8px !important;
   color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 13px !important;
+  font-size: 11.7px !important;
   font-weight: 800 !important;
 }
 
@@ -4252,7 +4255,7 @@ main section:not(.hero-scroll) .pricing-header p {
   color: #fecaca !important;
   border-radius: 999px !important;
   padding: 8px 13px !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 900 !important;
   cursor: pointer !important;
 }
@@ -4274,14 +4277,14 @@ main section:not(.hero-scroll) .pricing-header p {
   place-items: center !important;
   background: rgba(34, 197, 94, 0.22) !important;
   color: #bbf7d0 !important;
-  font-size: 30px !important;
+  font-size: 25.5px !important;
   font-weight: 900 !important;
 }
 
 .order-success-box h3 {
   margin: 0 0 10px !important;
   color: #ffffff !important;
-  font-size: 28px !important;
+  font-size: 24.6px !important;
 }
 
 .order-success-box p {
@@ -4296,7 +4299,7 @@ main section:not(.hero-scroll) .pricing-header p {
   border-radius: 999px !important;
   background: #ffffff !important;
   color: #020617 !important;
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   font-weight: 900 !important;
   text-decoration: none !important;
 }
@@ -4340,7 +4343,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .stagger-heading h2 {
   margin: 14px 0 16px !important;
   color: #ffffff !important;
-  font-size: clamp(38px, 5.4vw, 72px) !important;
+  font-size: clamp(32.3px, 5.4vw, 59px) !important;
   line-height: 0.98 !important;
   letter-spacing: -0.065em !important;
 }
@@ -4349,7 +4352,7 @@ main section:not(.hero-scroll) .pricing-header p {
   margin: 0 auto !important;
   max-width: 660px !important;
   color: rgba(255, 255, 255, 0.68) !important;
-  font-size: 17px !important;
+  font-size: 15.3px !important;
   line-height: 1.8 !important;
 }
 
@@ -4453,7 +4456,7 @@ main section:not(.hero-scroll) .pricing-header p {
   background: rgba(59, 130, 246, 0.13) !important;
   border: 1px solid rgba(96, 165, 250, 0.24) !important;
   color: #93c5fd !important;
-  font-size: 12px !important;
+  font-size: 11.4px !important;
   font-weight: 950 !important;
   letter-spacing: 0.1em !important;
   text-transform: uppercase !important;
@@ -4462,7 +4465,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .stagger-card h3 {
   margin: 0 0 12px !important;
   color: #ffffff !important;
-  font-size: 26px !important;
+  font-size: 22.9px !important;
   line-height: 1.1 !important;
   letter-spacing: -0.04em !important;
 }
@@ -4470,7 +4473,7 @@ main section:not(.hero-scroll) .pricing-header p {
 .stagger-card p {
   margin: 0 !important;
   color: rgba(255, 255, 255, 0.66) !important;
-  font-size: 15px !important;
+  font-size: 13.5px !important;
   line-height: 1.75 !important;
 }
 
@@ -4619,30 +4622,30 @@ main section:not(.hero-scroll) .pricing-header p {
 }
 /* Smaller typography for How It Works */
 .stagger-heading h2 {
-  font-size: clamp(30px, 3.8vw, 48px) !important;
+  font-size: clamp(25.5px, 3.8vw, 39.4px) !important;
   line-height: 1.08 !important;
   letter-spacing: -0.045em !important;
 }
 
 .stagger-heading p {
-  font-size: 15px !important;
+  font-size: 13.5px !important;
   line-height: 1.7 !important;
   max-width: 600px !important;
 }
 
 .stagger-card h3 {
-  font-size: 21px !important;
+  font-size: 18.5px !important;
   line-height: 1.18 !important;
   letter-spacing: -0.025em !important;
 }
 
 .stagger-card p {
-  font-size: 14px !important;
+  font-size: 12.6px !important;
   line-height: 1.65 !important;
 }
 
 .step-label {
-  font-size: 11px !important;
+  font-size: 10.4px !important;
   padding: 6px 10px !important;
 }
 
@@ -4665,263 +4668,368 @@ main section:not(.hero-scroll) .pricing-header p {
 .stagger-timeline {
   row-gap: 20px !important;
 }
+/* =========================================================
+   WHY CHOOSE US — FINAL CLEAN SECTION
+   Logo animation is controlled by main.js.
+   ========================================================= */
 
-/* Cinematic Why Choose Us - video style */
-.why-cinematic-section {
+.why-premier-section {
   position: relative !important;
-  height: 280vh !important;
-  background:
-    radial-gradient(circle at 50% 40%, rgba(37, 99, 235, 0.18), transparent 32%),
-    radial-gradient(circle at 70% 70%, rgba(14, 165, 233, 0.08), transparent 34%),
-    #020617 !important;
+  height: 520vh !important;
+  padding: 0 !important;
+  margin-bottom: 0 !important;
   overflow: visible !important;
-}
-
-.why-cinematic-section::before {
-  content: "" !important;
-  position: absolute !important;
-  inset: 0 !important;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px) !important;
-  background-size: 80px 80px !important;
-  opacity: 0.35 !important;
-  pointer-events: none !important;
+    radial-gradient(circle at 50% 42%, rgba(37, 99, 235, 0.2), transparent 34%),
+    radial-gradient(circle at 50% 62%, rgba(14, 165, 233, 0.1), transparent 38%),
+    #020617 !important;
+  color: #ffffff !important;
 }
 
-.why-cinematic-sticky {
+.why-premier-sticky {
   position: sticky !important;
   top: 0 !important;
   height: 100vh !important;
+  padding: 24px !important;
   display: grid !important;
   place-items: center !important;
   overflow: hidden !important;
+  box-sizing: border-box !important;
 }
 
-/* logo stage */
-.why-cinematic-logo {
+.why-premier-logo-wrap {
   position: absolute !important;
-  inset: 0 !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 10 !important;
   display: grid !important;
   place-items: center !important;
-  text-align: center !important;
+  transform:
+    translate(-50%, -50%)
+    scale(var(--why-logo-scale, 0.75)) !important;
   opacity: var(--why-logo-opacity, 1) !important;
-  transform: scale(var(--why-logo-scale, 0.42)) translateY(var(--why-logo-y, 0px)) !important;
-  will-change: transform, opacity !important;
+  transform-origin: center center !important;
+  pointer-events: none !important;
 }
 
-.why-logo-orb {
-  width: 82px !important;
-  height: 82px !important;
-  border-radius: 24px !important;
+.why-premier-logo {
+  width: 105px !important;
+  height: 105px !important;
   display: grid !important;
   place-items: center !important;
-  background:
-    radial-gradient(circle at 35% 25%, rgba(147, 197, 253, 0.55), transparent 30%),
-    linear-gradient(145deg, rgba(37, 99, 235, 0.32), rgba(14, 165, 233, 0.12)),
-    rgba(15, 23, 42, 0.95) !important;
-  border: 1px solid rgba(147, 197, 253, 0.38) !important;
-  box-shadow:
-    0 0 55px rgba(56, 189, 248, 0.32),
-    0 0 120px rgba(37, 99, 235, 0.2),
-    0 30px 90px rgba(0, 0, 0, 0.45) !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  overflow: visible !important;
 }
 
-.why-logo-orb span {
-  color: #ffffff !important;
-  font-size: 23px !important;
-  font-weight: 950 !important;
-  letter-spacing: -0.05em !important;
+.why-premier-logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  filter:
+    drop-shadow(0 0 30px rgba(56, 189, 248, 0.5))
+    drop-shadow(0 0 90px rgba(37, 99, 235, 0.24)) !important;
 }
 
-.why-cinematic-logo p {
-  margin: 16px 0 0 !important;
-  color: rgba(255, 255, 255, 0.72) !important;
-  font-size: 11px !important;
-  font-weight: 900 !important;
-  letter-spacing: 0.18em !important;
+.why-floating-label {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  z-index: 99999 !important;
+  transform:
+    translate(-50%, -50%)
+    translateY(var(--why-label-y, 130px)) !important;
+  opacity: var(--why-label-opacity, 1) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+  font-size: var(--why-label-size, 26px) !important;
+  font-weight: 600 !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.055em !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+  width: max-content !important;
+  max-width: none !important;
+  display: block !important;
+  visibility: visible !important;
+  pointer-events: none !important;
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, sans-serif !important;
+  will-change: transform, opacity, font-size !important;
 }
 
-/* content stage */
-.why-cinematic-content {
-  width: min(1080px, calc(100% - 40px)) !important;
+.why-premier-label {
+  display: none !important;
+}
+
+.why-premier-content {
+  position: relative !important;
+  z-index: 2 !important;
+  width: min(1120px, calc(100% - 72px)) !important;
   margin: 0 auto !important;
   opacity: var(--why-content-opacity, 0) !important;
-  transform: translateY(var(--why-content-y, 46px)) scale(var(--why-content-scale, 0.96)) !important;
+  visibility: var(--why-content-visibility, hidden) !important;
+  transform:
+    translateY(calc(var(--why-content-y, 30px) - 90px))
+    scale(var(--why-content-scale, 0.98)) !important;
+  transform-origin: center center !important;
   will-change: transform, opacity !important;
 }
 
-.why-cinematic-heading {
+.why-premier-heading {
   max-width: 720px !important;
-  margin: 0 auto 34px !important;
+  margin: 0 auto 22px !important;
   text-align: center !important;
 }
 
-.why-cinematic-heading h2 {
-  margin: 12px 0 12px !important;
+.why-premier-heading h2 {
+  margin: 6px 0 8px !important;
   color: #ffffff !important;
-  font-size: clamp(30px, 3.6vw, 46px) !important;
-  line-height: 1.08 !important;
-  letter-spacing: -0.045em !important;
+  font-size: clamp(24px, 2.7vw, 36px) !important;
+  line-height: 1.05 !important;
+  letter-spacing: -0.035em !important;
 }
 
-.why-cinematic-heading p {
+.why-premier-heading p {
+  max-width: 560px !important;
   margin: 0 auto !important;
-  max-width: 620px !important;
   color: rgba(255, 255, 255, 0.66) !important;
-  font-size: 15px !important;
-  line-height: 1.7 !important;
+  font-size: 12px !important;
+  line-height: 1.45 !important;
 }
 
-.why-cinematic-grid {
+.why-reason-grid {
+  width: min(1060px, 100%) !important;
+  margin: 0 auto !important;
   display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap: 14px !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 12px !important;
 }
 
-.why-cinematic-card {
+.why-reason-card {
+  --card-accent: #3b82f6;
   position: relative !important;
-  min-height: 138px !important;
-  padding: 20px 22px !important;
-  border-radius: 24px !important;
-  background:
-    linear-gradient(145deg, rgba(15, 23, 42, 0.82), rgba(2, 6, 23, 0.92)) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.28) !important;
+  min-height: 136px !important;
+  padding: 18px !important;
+  border-radius: 20px !important;
   overflow: hidden !important;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.88), rgba(2, 6, 23, 0.96)) !important;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 36%, rgba(255, 255, 255, 0.12)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 22px 70px rgba(0, 0, 0, 0.28) !important;
   opacity: 0 !important;
-  transform: translateY(36px) scale(0.96) !important;
-  transition: opacity 0.35s ease, transform 0.35s ease, border-color 0.25s ease !important;
+  visibility: hidden !important;
+  transform: translateY(24px) scale(0.97) !important;
+  transition:
+    opacity 0.38s ease,
+    transform 0.38s ease,
+    visibility 0.38s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease !important;
 }
 
-.why-cinematic-card.is-visible {
+.why-reason-card.is-visible {
   opacity: 1 !important;
+  visibility: visible !important;
   transform: translateY(0) scale(1) !important;
 }
 
-.why-cinematic-card::before {
+.why-reason-card::before {
   content: "" !important;
   position: absolute !important;
   inset: 0 !important;
   background:
-    radial-gradient(circle at left top, rgba(56, 189, 248, 0.22), transparent 34%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.05), transparent 38%) !important;
-  opacity: 0 !important;
-  transition: 0.25s ease !important;
+    radial-gradient(circle at 18% 0%, color-mix(in srgb, var(--card-accent) 26%, transparent), transparent 42%),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.055), transparent 38%) !important;
+  opacity: 0.8 !important;
+  pointer-events: none !important;
 }
 
-.why-cinematic-card:hover {
-  border-color: rgba(96, 165, 250, 0.35) !important;
-  transform: translateY(-4px) scale(1) !important;
+.why-reason-card::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 12% !important;
+  right: 12% !important;
+  top: -1px !important;
+  height: 1px !important;
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--card-accent) 70%, white),
+      transparent
+    ) !important;
+  opacity: 0.65 !important;
 }
 
-.why-cinematic-card:hover::before {
-  opacity: 1 !important;
+.why-reason-card:hover {
+  transform: translateY(-5px) scale(1) !important;
+  border-color: color-mix(in srgb, var(--card-accent) 58%, rgba(255, 255, 255, 0.16)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.08),
+    0 28px 80px color-mix(in srgb, var(--card-accent) 18%, rgba(0, 0, 0, 0.35)) !important;
 }
 
-.why-cinematic-card > * {
+.why-reason-card > * {
   position: relative !important;
   z-index: 1 !important;
 }
 
-.why-cinematic-card span {
-  display: inline-flex !important;
-  margin-bottom: 12px !important;
-  color: #38bdf8 !important;
-  font-size: 12px !important;
+.why-reason-icon {
+  width: 34px !important;
+  height: 34px !important;
+  margin-bottom: 14px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 10px !important;
+  background:
+    radial-gradient(circle at 30% 20%, color-mix(in srgb, var(--card-accent) 34%, transparent), transparent 48%),
+    rgba(2, 6, 23, 0.92) !important;
+  border: 1px solid color-mix(in srgb, var(--card-accent) 72%, rgba(255, 255, 255, 0.14)) !important;
+  color: color-mix(in srgb, var(--card-accent) 78%, white) !important;
+  font-size: 15px !important;
   font-weight: 950 !important;
-  letter-spacing: 0.12em !important;
+  box-shadow:
+    0 0 22px color-mix(in srgb, var(--card-accent) 34%, transparent),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
 }
 
-.why-cinematic-card h3 {
-  margin: 0 0 8px !important;
+.why-reason-card h3 {
+  margin: 0 0 7px !important;
   color: #ffffff !important;
-  font-size: 18px !important;
-  line-height: 1.2 !important;
-  letter-spacing: -0.025em !important;
-}
-
-.why-cinematic-card p {
-  margin: 0 !important;
-  color: rgba(255, 255, 255, 0.62) !important;
-  font-size: 13.5px !important;
-  line-height: 1.6 !important;
-}
-
-@media (max-width: 800px) {
-  .why-cinematic-section {
-    height: auto !important;
-    padding: 90px 16px !important;
-  }
-
-  .why-cinematic-sticky {
-    position: relative !important;
-    height: auto !important;
-    overflow: visible !important;
-  }
-
-  .why-cinematic-logo {
-    position: relative !important;
-    margin-bottom: 40px !important;
-    transform: scale(1) !important;
-    opacity: 1 !important;
-  }
-
-  .why-cinematic-content {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-
-  .why-cinematic-grid {
-    grid-template-columns: 1fr !important;
-  }
-
-  .why-cinematic-card {
-    opacity: 1 !important;
-    transform: none !important;
-  }
-}
-
-/* Why Choose Us size tuning */
-.why-cinematic-heading {
-  margin-bottom: 26px !important;
-}
-
-.why-cinematic-heading h2 {
-  font-size: clamp(26px, 3vw, 38px) !important;
-  line-height: 1.12 !important;
+  font-size: 16px !important;
+  line-height: 1.14 !important;
   letter-spacing: -0.035em !important;
 }
 
-.why-cinematic-heading p {
-  font-size: 14px !important;
-  line-height: 1.65 !important;
-  max-width: 560px !important;
+.why-reason-card p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.62) !important;
+  font-size: 11.5px !important;
+  line-height: 1.42 !important;
 }
 
-.why-cinematic-grid {
-  width: min(920px, 100%) !important;
-  margin: 0 auto !important;
-  gap: 12px !important;
+.why-reason-card.accent-blue {
+  --card-accent: #3b82f6;
 }
 
-.why-cinematic-card {
-  min-height: 118px !important;
-  padding: 17px 18px !important;
-  border-radius: 20px !important;
+.why-reason-card.accent-cyan {
+  --card-accent: #22d3ee;
 }
 
-.why-cinematic-card span {
-  margin-bottom: 9px !important;
-  font-size: 11px !important;
+.why-reason-card.accent-purple {
+  --card-accent: #8b5cf6;
 }
 
-.why-cinematic-card h3 {
-  font-size: 16px !important;
-  margin-bottom: 6px !important;
+.why-reason-card.accent-indigo {
+  --card-accent: #6366f1;
 }
 
-.why-cinematic-card p {
-  font-size: 12.8px !important;
-  line-height: 1.55 !important;
+.why-reason-card.accent-sky {
+  --card-accent: #38bdf8;
+}
+
+.why-reason-card.accent-violet {
+  --card-accent: #a855f7;
+}
+
+@media (max-height: 760px) and (min-width: 901px) {
+  .why-premier-heading {
+    margin-bottom: 16px !important;
+  }
+
+  .why-premier-heading h2 {
+    font-size: 30px !important;
+  }
+
+  .why-premier-heading p {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+  }
+
+  .why-reason-grid {
+    gap: 10px !important;
+  }
+
+  .why-reason-card {
+    min-height: 122px !important;
+    padding: 16px !important;
+  }
+
+  .why-reason-icon {
+    width: 30px !important;
+    height: 30px !important;
+    margin-bottom: 10px !important;
+    font-size: 14px !important;
+  }
+
+  .why-reason-card h3 {
+    font-size: 15px !important;
+    margin-bottom: 5px !important;
+  }
+
+  .why-reason-card p {
+    font-size: 10.8px !important;
+    line-height: 1.34 !important;
+  }
+}
+
+@media (max-width: 900px) {
+  .why-premier-section {
+    height: auto !important;
+    padding: 86px 16px !important;
+  }
+
+  .why-premier-sticky {
+    position: relative !important;
+    height: auto !important;
+    overflow: visible !important;
+    padding: 0 !important;
+  }
+
+  .why-premier-logo-wrap {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    opacity: 1 !important;
+    margin: 0 auto 24px !important;
+  }
+
+  .why-floating-label {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    transform: none !important;
+    margin: 0 auto 34px !important;
+    text-align: center !important;
+    font-size: 38px !important;
+    opacity: 1 !important;
+  }
+
+  .why-premier-content {
+    width: min(100%, 720px) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+  }
+
+  .why-reason-grid {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .why-reason-card {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    min-height: auto !important;
+  }
+}
+
+/* give pricing section breathing room after the scroll section */
+.pricing-calculator-section {
+  padding-top: 190px !important;
 }

@@ -289,12 +289,18 @@ const tierDropdown = document.querySelector("#tierDropdown");
 const tierDropdownLabel = document.querySelector("#tierDropdownLabel");
 const tierDropdownItems = document.querySelectorAll(".tier-dropdown-item");
 
-const pricingAddonInputs = document.querySelectorAll(".addon-dropdown-item input");
+const pricingAddonInputs = document.querySelectorAll(
+  ".addon-dropdown-item input",
+);
 const addonsCount = document.querySelector("#addonsCount");
 
 const maintenanceDropdown = document.querySelector("#maintenanceDropdown");
-const maintenanceDropdownLabel = document.querySelector("#maintenanceDropdownLabel");
-const maintenanceDropdownItems = document.querySelectorAll(".maintenance-dropdown-item");
+const maintenanceDropdownLabel = document.querySelector(
+  "#maintenanceDropdownLabel",
+);
+const maintenanceDropdownItems = document.querySelectorAll(
+  ".maintenance-dropdown-item",
+);
 
 const hostingToggle = document.querySelector("#hostingToggle");
 const hostingToggleLabel = document.querySelector("#hostingToggleLabel");
@@ -321,7 +327,9 @@ const addonInfoVideo = document.querySelector("#addonInfoVideo");
 const addonInfoVideoSource = document.querySelector("#addonInfoVideoSource");
 const addonInfoTextWrap = document.querySelector("#addonInfoTextWrap");
 const addonInfoTextList = document.querySelector("#addonInfoTextList");
-const closeAddonModalButtons = document.querySelectorAll("[data-close-addon-modal]");
+const closeAddonModalButtons = document.querySelectorAll(
+  "[data-close-addon-modal]",
+);
 
 const VAT_RATE = 0.16;
 const HOSTING_RATE = 0.05;
@@ -519,52 +527,52 @@ const addonInfoData = {
   },
 
   hosting: {
-  title: "Managed Hosting Setup",
-  description:
-    "Managed hosting setup helps prepare your website or platform to go live on a reliable hosting environment.",
-  type: "text",
-  details: [
-    "Connect the project to a hosting platform.",
-    "Prepare the live production environment.",
-    "Set up basic deployment configuration.",
-    "Connect hosting with the selected domain when needed.",
-    "Help make the website accessible online.",
-    "Hosting provider fees are not included unless agreed separately.",
-  ],
-},
+    title: "Managed Hosting Setup",
+    description:
+      "Managed hosting setup helps prepare your website or platform to go live on a reliable hosting environment.",
+    type: "text",
+    details: [
+      "Connect the project to a hosting platform.",
+      "Prepare the live production environment.",
+      "Set up basic deployment configuration.",
+      "Connect hosting with the selected domain when needed.",
+      "Help make the website accessible online.",
+      "Hosting provider fees are not included unless agreed separately.",
+    ],
+  },
 };
 
 const pricingTiers = {
   t1: {
     code: "T1",
     name: "Landing Page / Marketing Site",
-    price: 50
+    price: 50,
   },
   t2: {
     code: "T2",
     name: "Business Website + Admin Panel",
-    price: 100
+    price: 100,
   },
   t3: {
     code: "T3",
     name: "Custom Web Application / MVP",
-    price: 150
+    price: 150,
   },
   t4: {
     code: "T4",
     name: "SaaS Platform",
-    price: 200
+    price: 200,
   },
   t5: {
     code: "T5",
     name: "ERP / CRM / Enterprise System",
-    price: 250
+    price: 250,
   },
   t6: {
     code: "T6",
     name: "AI-Powered Platform / Automation System",
-    price: 250
-  }
+    price: 250,
+  },
 };
 
 const pricingAddons = {
@@ -587,7 +595,7 @@ const pricingAddons = {
   devops: { name: "DevOps & CI/CD Setup", price: 50 },
   security: { name: "2FA / Security Hardening", price: 50 },
   seo: { name: "SEO Optimization", price: 25 },
-  domain: { name: "Custom Domain & DNS Setup", price: 25 }
+  domain: { name: "Custom Domain & DNS Setup", price: 25 },
 };
 
 function openAddonInfoModal(addonKey) {
@@ -690,7 +698,7 @@ function formatJOD(amount) {
 
   return `${fixedAmount.toLocaleString(undefined, {
     minimumFractionDigits: 2,
-    maximumFractionDigits: 2
+    maximumFractionDigits: 2,
   })} JOD`;
 }
 
@@ -706,7 +714,7 @@ function getSelectedPricingAddons() {
       selectedAddons.push({
         key: input.value,
         name: pricingAddons[input.value].name,
-        price: pricingAddons[input.value].price
+        price: pricingAddons[input.value].price,
       });
     }
   });
@@ -749,20 +757,20 @@ function calculateEstimate() {
   const highRange = total * 1.15;
 
   return {
-  tier,
-  selectedAddons,
-  basePrice,
-  addonsTotal,
-  projectSubtotal,
-  selectedMaintenanceMonths,
-  maintenanceMonthly,
-  maintenanceTotal,
-  selectedHosting,
-  hostingFee,
-  vatAmount,
-  total,
-  lowRange,
-  highRange
+    tier,
+    selectedAddons,
+    basePrice,
+    addonsTotal,
+    projectSubtotal,
+    selectedMaintenanceMonths,
+    maintenanceMonthly,
+    maintenanceTotal,
+    selectedHosting,
+    hostingFee,
+    vatAmount,
+    total,
+    lowRange,
+    highRange,
   };
 }
 
@@ -785,7 +793,7 @@ function updateEstimateUI() {
   estimateTotal.textContent = formatJOD(estimate.total);
 
   estimateRange.textContent = `Estimated range: ${formatJOD(
-    estimate.lowRange
+    estimate.lowRange,
   )}–${formatJOD(estimate.highRange)}`;
 
   summaryBase.textContent = formatJOD(estimate.basePrice);
@@ -797,7 +805,9 @@ function updateEstimateUI() {
       : "Not selected";
 
   summaryHosting.textContent =
-    selectedHosting === "managed" ? formatJOD(estimate.hostingFee) : "Not selected";
+    selectedHosting === "managed"
+      ? formatJOD(estimate.hostingFee)
+      : "Not selected";
 
   summaryVAT.textContent = formatJOD(estimate.vatAmount);
 
@@ -858,7 +868,6 @@ function updateEstimateUI() {
   `;
   estimateBreakdown.appendChild(vatItem);
 }
-
 
 /* Tier dropdown */
 tierDropdownItems.forEach((item) => {
@@ -954,69 +963,121 @@ if (requestEstimateBtn) {
 
 updateEstimateUI();
 
-const cinematicWhySection = document.querySelector(".why-cinematic-section");
-const cinematicWhyCards = document.querySelectorAll(".why-cinematic-card");
+/* Why Choose Us logo zoom scroll - FINAL DIRECT VERSION */
+const whyPremierSection = document.querySelector(".why-premier-section");
+const whyPremierPoints = document.querySelectorAll(".why-reason-card");
+const whyFloatingLabel = document.querySelector(".why-floating-label");
 
-function gmClamp(value, min, max) {
+function whyClamp(value, min, max) {
   return Math.min(Math.max(value, min), max);
 }
 
-function updateCinematicWhy() {
-  if (!cinematicWhySection) return;
+function setWhyLabelStyles(y, size, opacity) {
+  if (!whyFloatingLabel) return;
 
-  if (window.innerWidth <= 800) {
-    cinematicWhySection.style.setProperty("--why-logo-scale", 1);
-    cinematicWhySection.style.setProperty("--why-logo-opacity", 1);
-    cinematicWhySection.style.setProperty("--why-logo-y", "0px");
-    cinematicWhySection.style.setProperty("--why-content-opacity", 1);
-    cinematicWhySection.style.setProperty("--why-content-y", "0px");
-    cinematicWhySection.style.setProperty("--why-content-scale", 1);
+  whyFloatingLabel.style.setProperty("position", "absolute", "important");
+  whyFloatingLabel.style.setProperty("left", "50%", "important");
+  whyFloatingLabel.style.setProperty("top", "50%", "important");
+  whyFloatingLabel.style.setProperty("z-index", "99999", "important");
 
-    cinematicWhyCards.forEach((card) => card.classList.add("is-visible"));
+  whyFloatingLabel.style.setProperty(
+    "transform",
+    `translate(-50%, -50%) translateY(${y}px)`,
+    "important"
+  );
+
+  whyFloatingLabel.style.setProperty("font-size", `${size}px`, "important");
+  whyFloatingLabel.style.setProperty("opacity", `${opacity}`, "important");
+
+  whyFloatingLabel.style.setProperty("color", "rgba(255, 255, 255, 0.96)", "important");
+  whyFloatingLabel.style.setProperty("font-weight", "600", "important");
+  whyFloatingLabel.style.setProperty("line-height", "0.95", "important");
+  whyFloatingLabel.style.setProperty("letter-spacing", "-0.055em", "important");
+  whyFloatingLabel.style.setProperty("text-transform", "none", "important");
+  whyFloatingLabel.style.setProperty("white-space", "nowrap", "important");
+  whyFloatingLabel.style.setProperty("display", "block", "important");
+  whyFloatingLabel.style.setProperty("visibility", "visible", "important");
+  whyFloatingLabel.style.setProperty("pointer-events", "none", "important");
+}
+
+function updateWhyPremierScroll() {
+  if (!whyPremierSection) return;
+
+  if (window.innerWidth <= 900) {
+    whyPremierSection.style.setProperty("--why-logo-scale", 1);
+    whyPremierSection.style.setProperty("--why-logo-opacity", 1);
+
+    setWhyLabelStyles(0, 42, 1);
+
+    whyPremierSection.style.setProperty("--why-content-opacity", 1);
+    whyPremierSection.style.setProperty("--why-content-y", "0px");
+    whyPremierSection.style.setProperty("--why-content-scale", 1);
+    whyPremierSection.style.setProperty("--why-content-visibility", "visible");
+
+    whyPremierPoints.forEach((point) => point.classList.add("is-visible"));
     return;
   }
 
-  const rect = cinematicWhySection.getBoundingClientRect();
-  const scrollable = cinematicWhySection.offsetHeight - window.innerHeight;
-  const progress = gmClamp(-rect.top / scrollable, 0, 1);
+  const rect = whyPremierSection.getBoundingClientRect();
+  const scrollable = whyPremierSection.offsetHeight - window.innerHeight;
+  const progress = whyClamp(-rect.top / scrollable, 0, 1);
 
   /*
-    0.00 - 0.30 logo small to big
-    0.30 - 0.48 logo becomes huge and fades
-    0.48 - 0.60 empty transition
-    0.60 - 1.00 content/cards appear
+    0.00 - 0.40 logo grows
+    0.00 - 0.34 label moves up and grows
+    0.34 - 0.52 logo + label fade out
+    0.50 - 0.68 content appears
+    0.62 - 0.84 cards appear
   */
 
-  const logoGrow = gmClamp(progress / 0.34, 0, 1);
-  const logoFade = gmClamp((progress - 0.34) / 0.16, 0, 1);
-  const contentReveal = gmClamp((progress - 0.56) / 0.18, 0, 1);
-
-  const logoScale = 0.38 + logoGrow * 9.6;
+  const logoGrow = whyClamp(progress / 0.4, 0, 1);
+  const logoFade = whyClamp((progress - 0.48) / 0.16, 0, 1);
+const contentReveal = whyClamp((progress - 0.62) / 0.18, 0, 1);
+  const logoScale = 0.75 + logoGrow * 5.0;
   const logoOpacity = 1 - logoFade;
-  const logoY = -logoGrow * 18;
+
+const labelMove = whyClamp(progress / 0.30, 0, 1);
+  /*
+    labelY:
+    155px = starts clearly under the logo
+    0px = center of the logo
+
+    labelSize:
+    28px = small at the start
+    118px = large like the reference image
+  */
+  const labelY = 155 - labelMove * 155;
+  const labelSize = 28 + labelMove * 90;
+  const labelOpacity = 1 - logoFade;
 
   const contentOpacity = contentReveal;
-  const contentY = 44 - contentReveal * 44;
-  const contentScale = 0.96 + contentReveal * 0.04;
+  const contentY = 30 - contentReveal * 30;
+  const contentScale = 0.98 + contentReveal * 0.02;
 
-  cinematicWhySection.style.setProperty("--why-logo-scale", logoScale);
-  cinematicWhySection.style.setProperty("--why-logo-opacity", logoOpacity);
-  cinematicWhySection.style.setProperty("--why-logo-y", `${logoY}px`);
-  cinematicWhySection.style.setProperty("--why-content-opacity", contentOpacity);
-  cinematicWhySection.style.setProperty("--why-content-y", `${contentY}px`);
-  cinematicWhySection.style.setProperty("--why-content-scale", contentScale);
+  whyPremierSection.style.setProperty("--why-logo-scale", logoScale);
+  whyPremierSection.style.setProperty("--why-logo-opacity", logoOpacity);
 
-  cinematicWhyCards.forEach((card, index) => {
-    const start = 0.63 + index * 0.045;
+  setWhyLabelStyles(labelY, labelSize, labelOpacity);
+
+  whyPremierSection.style.setProperty("--why-content-opacity", contentOpacity);
+  whyPremierSection.style.setProperty("--why-content-y", `${contentY}px`);
+  whyPremierSection.style.setProperty("--why-content-scale", contentScale);
+  whyPremierSection.style.setProperty(
+    "--why-content-visibility",
+    contentReveal > 0.05 ? "visible" : "hidden"
+  );
+
+  whyPremierPoints.forEach((point, index) => {
+    const start = 0.72 + index * 0.035;
 
     if (progress >= start) {
-      card.classList.add("is-visible");
+      point.classList.add("is-visible");
     } else {
-      card.classList.remove("is-visible");
+      point.classList.remove("is-visible");
     }
   });
 }
 
-window.addEventListener("scroll", updateCinematicWhy);
-window.addEventListener("resize", updateCinematicWhy);
-updateCinematicWhy();
+window.addEventListener("scroll", updateWhyPremierScroll);
+window.addEventListener("resize", updateWhyPremierScroll);
+updateWhyPremierScroll();
