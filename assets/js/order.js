@@ -49,7 +49,7 @@ function renderEstimateSummary() {
   if (!estimate) {
     orderEstimateSummary.innerHTML = `
       <p>No estimate found. Please go back to the pricing calculator and select your project details.</p>
-      <a href="index.html#packages" class="hero-btn-primary">Back to Calculator</a>
+      <a href="index.html#calculator" class="hero-btn-primary">Back to Calculator</a>
     `;
     return;
   }
