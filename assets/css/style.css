@@ -5156,6 +5156,251 @@ main section:not(.hero-scroll) .pricing-header p {
 }
 
 /* =========================
+   Founder Story Section
+========================= */
+
+.founder-story-section {
+  position: relative !important;
+  padding: 120px 0 !important;
+  overflow: hidden !important;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(59, 130, 246, 0.16), transparent 32%),
+    radial-gradient(circle at 88% 20%, rgba(139, 92, 246, 0.14), transparent 30%),
+    linear-gradient(180deg, #020617 0%, #05070d 52%, #020617 100%) !important;
+  color: #ffffff !important;
+}
+
+.founder-story-section::before {
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px) !important;
+  background-size: 76px 76px !important;
+  opacity: 0.24 !important;
+  mask-image: radial-gradient(circle at center, black, transparent 74%) !important;
+  pointer-events: none !important;
+}
+
+.founder-story-container {
+  position: relative !important;
+  z-index: 1 !important;
+  width: min(1180px, calc(100% - 72px)) !important;
+  margin: 0 auto !important;
+  display: grid !important;
+  grid-template-columns: 0.9fr 1.1fr !important;
+  align-items: center !important;
+  gap: 54px !important;
+}
+
+.founder-story-copy {
+  max-width: 520px !important;
+}
+
+.founder-story-copy .section-kicker {
+  margin: 0 0 18px !important;
+}
+
+.founder-story-copy h2 {
+  margin: 0 0 18px !important;
+  color: #ffffff !important;
+  font-size: clamp(34px, 5vw, 64px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -0.065em !important;
+}
+
+.founder-story-copy p {
+  margin: 0 !important;
+  color: rgba(255, 255, 255, 0.68) !important;
+  font-size: 14px !important;
+  line-height: 1.7 !important;
+}
+
+.founder-story-copy p strong {
+  color: #ffffff !important;
+  font-weight: 800 !important;
+}
+
+.founder-story-quote {
+  margin-top: 24px !important;
+  padding: 20px !important;
+  border-radius: 22px !important;
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 42%),
+    rgba(255, 255, 255, 0.055) !important;
+  border: 1px solid rgba(255, 255, 255, 0.11) !important;
+  color: rgba(255, 255, 255, 0.86) !important;
+  font-size: 15px !important;
+  line-height: 1.55 !important;
+  font-weight: 600 !important;
+}
+
+.founder-story-actions {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 12px !important;
+  margin-top: 28px !important;
+}
+
+.founder-story-primary,
+.founder-story-secondary {
+  min-height: 44px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 20px !important;
+  border-radius: 999px !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+}
+
+.founder-story-primary {
+  background: linear-gradient(135deg, #6617ff, #3b82f6) !important;
+  color: #ffffff !important;
+  box-shadow: 0 18px 42px rgba(59, 130, 246, 0.24) !important;
+}
+
+.founder-story-secondary {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  color: #ffffff !important;
+}
+
+.founder-video-card {
+  position: relative !important;
+  padding: 18px !important;
+  border-radius: 32px !important;
+  background:
+    radial-gradient(circle at top right, rgba(56, 189, 248, 0.14), transparent 36%),
+    linear-gradient(145deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.98)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  box-shadow:
+    0 34px 90px rgba(0, 0, 0, 0.38),
+    0 0 70px rgba(37, 99, 235, 0.16) !important;
+}
+
+.founder-video-badge {
+  width: fit-content !important;
+  margin: 0 0 14px !important;
+  padding: 8px 12px !important;
+  border-radius: 999px !important;
+  background: rgba(56, 189, 248, 0.11) !important;
+  border: 1px solid rgba(56, 189, 248, 0.22) !important;
+  color: #93c5fd !important;
+  font-size: 11px !important;
+  font-weight: 850 !important;
+  letter-spacing: 0.11em !important;
+  text-transform: uppercase !important;
+}
+
+.founder-video-frame {
+  position: relative !important;
+  width: 100% !important;
+  aspect-ratio: 16 / 9 !important;
+  overflow: hidden !important;
+  border-radius: 24px !important;
+  background: #020617 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.founder-video-frame iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+.founder-video-card p {
+  margin: 14px 4px 0 !important;
+  color: rgba(255, 255, 255, 0.56) !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .founder-story-section {
+    padding: 90px 0 !important;
+  }
+
+  .founder-story-container {
+    width: min(100% - 32px, 1180px) !important;
+    grid-template-columns: 1fr !important;
+    gap: 34px !important;
+  }
+
+  .founder-story-copy {
+    max-width: 760px !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .founder-story-copy .section-kicker {
+    margin: 0 auto 16px !important;
+  }
+
+  .founder-story-actions {
+    justify-content: center !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .founder-story-section {
+    padding: 76px 0 !important;
+  }
+
+  .founder-story-container {
+    width: min(100% - 24px, 1180px) !important;
+    gap: 26px !important;
+  }
+
+  .founder-story-copy h2 {
+    font-size: 30px !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.045em !important;
+  }
+
+  .founder-story-copy p {
+    font-size: 12.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .founder-story-quote {
+    margin-top: 18px !important;
+    padding: 16px !important;
+    border-radius: 18px !important;
+    font-size: 12.5px !important;
+  }
+
+  .founder-story-actions {
+    margin-top: 22px !important;
+  }
+
+  .founder-story-primary,
+  .founder-story-secondary {
+    width: 100% !important;
+    min-height: 42px !important;
+    font-size: 12px !important;
+  }
+
+  .founder-video-card {
+    padding: 12px !important;
+    border-radius: 22px !important;
+  }
+
+  .founder-video-frame {
+    border-radius: 16px !important;
+  }
+
+  .founder-video-badge {
+    font-size: 9.5px !important;
+  }
+}
+
+/* =========================
    Final CTA
 ========================= */
 

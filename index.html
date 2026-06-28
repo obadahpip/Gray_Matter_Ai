@@ -11,6 +11,7 @@
     content="Gray Matter AI builds premium websites, AI-powered platforms, SaaS MVPs, ERP systems, automation tools, and custom business systems." />
 
   <link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="assets/css/carousel.css" />
 </head>
 
 <body>
@@ -575,6 +576,112 @@
       </div>
     </section>
 
+
+<section class="founder-story-section" id="founder-story">
+  <div class="founder-story-container">
+    <div class="founder-story-copy">
+      <span class="section-kicker">Founder Story</span>
+
+      <h2>Meet the Vision Behind Gray Matter AI</h2>
+
+      <p>
+        Watch the recent interview featuring <strong>Abadah Abu Odeh</strong>, where he shares the story,
+        vision, and motivation behind building smarter digital systems for modern businesses.
+      </p>
+
+      <div class="founder-story-quote">
+        “Building smarter systems starts with understanding real business challenges.”
+      </div>
+
+      <div class="founder-story-actions">
+        <a
+          href="https://youtu.be/oXC-5fHk7bE?si=MbR9rTWyV0ddC031"
+          target="_blank"
+          rel="noopener"
+          class="founder-story-primary"
+        >
+          Watch the Interview
+        </a>
+
+        <a href="order.html" class="founder-story-secondary">
+          Start a Project
+        </a>
+      </div>
+    </div>
+
+    <div class="founder-video-card">
+      <div class="founder-video-badge">Featured Interview</div>
+
+      <div class="founder-video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/oXC-5fHk7bE"
+          title="Abadah Abu Odeh Interview"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <p>
+        Official YouTube interview featuring Abadah Abu Odeh.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OUR TEAM ─────────────────────────────────────── -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-label">Our Team</div>
+        <h2 class="section-title">Meet the people building your product</h2>
+        <p class="section-subtitle">A compact team of engineers, designers, and AI builders ready to move fast and ship dependable software.</p>
+      </div>
+
+        <!-- ── slider ─────────────── -->
+      <div class="my-custom-carousel reveal" data-reveal="zoom">
+    <div class="carousel-inner"> <div class="carousel-container">
+
+      <!-- Left Arrow -->
+      <button class="nav-arrow nav-arrow--left" id="prevBtn" aria-label="Previous employee">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Carousel Track -->
+      <div class="carousel-track" id="carouselTrack">
+        <!-- Slots rendered by JS -->
+        <div class="slot slot--prev" id="slotPrev"></div>
+        <div class="slot slot--active" id="slotActive"></div>
+        <div class="slot slot--next" id="slotNext"></div>
+      </div>
+
+      <!-- Right Arrow -->
+      <button class="nav-arrow nav-arrow--right" id="nextBtn" aria-label="Next employee">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+             stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+    </div><!-- /.carousel-container -->
+
+    <!-- Info Panel -->
+    <div class="info-panel" id="infoPanel">
+      <div class="info-inner">
+        <span class="info-name" id="infoName"></span>
+        <span class="info-divider">—</span>
+        <span class="info-position" id="infoPosition"></span>
+      </div>
+      <div class="info-dots" id="infoDots"></div>
+    </div>
+   </div>
+</div>
+      
+    </div>
+  </section>
 
     <section class="stagger-process-section" id="how-it-works">
       <div class="stagger-process-shell">
@@ -1288,6 +1395,7 @@
 </footer>
 
   <script src="assets/js/main.js"></script>
+<script src="assets/js/carousel.js" defer></script>
 </body>
 
 </html>
