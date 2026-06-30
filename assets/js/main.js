@@ -1033,7 +1033,7 @@ function updateWhyPremierScroll() {
   const logoGrow = whyClamp(progress / 0.4, 0, 1);
   const logoFade = whyClamp((progress - 0.48) / 0.16, 0, 1);
 const contentReveal = whyClamp((progress - 0.62) / 0.18, 0, 1);
-  const logoScale = 0.75 + logoGrow * 5.0;
+  const logoScale = 0.75 + logoGrow * 3.45;
   const logoOpacity = 1 - logoFade;
 
 const labelMove = whyClamp(progress / 0.30, 0, 1);

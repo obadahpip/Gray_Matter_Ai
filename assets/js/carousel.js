@@ -35,17 +35,24 @@ document.addEventListener("DOMContentLoaded", () => {
     },
      {
       name: "Maram Nidal",
-      position: "ERP Manager",
+      position: "Software Engineer",
       initials: "MN",
       color: "#5C3A2A",
       accent: "#E09A72",
     },
     {
       name: "Farah Arada",
-      position: "CRM Manager",
+      position: "Software Engineer",
       initials: "FA",
       color: "#2A3A5C",
       accent: "#7DA8E0",
+    },
+    {
+      name: "Dalia Abdulsalam",
+      position: "Social Media Specialist",
+      initials: "DA",
+      color: "#5C3A2A",
+      accent: "#E09A72",
     },
   ];
 
