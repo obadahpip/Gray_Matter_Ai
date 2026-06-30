@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://gray-matter-ai.onrender.com";
 
 const adminLoginForm = document.querySelector("#adminLoginForm");
 const adminEmailInput = document.querySelector("#adminEmail");

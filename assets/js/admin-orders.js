@@ -1,4 +1,4 @@
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://gray-matter-ai.onrender.com";
 
 const adminOrdersTableBody = document.querySelector("#adminOrdersTableBody");
 const adminOrdersMessage = document.querySelector("#adminOrdersMessage");
